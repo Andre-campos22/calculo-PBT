@@ -593,108 +593,148 @@ function consultarProdutos() {
 /* =============================
    REMESSAS DINÂMICAS
    ============================= */
-
-
 function gerarRemessas() {
-    const qtd = parseInt(document.getElementById("numRemessas").value);
+    const qtdNova = parseInt(document.getElementById("numRemessas").value);
+    if (!qtdNova || qtdNova <= 0) return;
+
     const container = document.getElementById("containerRemessas");
 
+    // 📌 Salvar os dados já preenchidos
+    let dadosAntigos = {};
+    const qtdAntiga = container.children.length;
+
+    for (let i = 1; i <= qtdAntiga; i++) {
+        dadosAntigos[i] = {
+            produto: document.getElementById(`buscaProduto_${i}`)?.value || "",
+            qtdRemessa: document.getElementById(`qtdRemessa_${i}`)?.value || "",
+            qtdPorPalete: document.getElementById(`qtdPorPalete_${i}`)?.value || "",
+            qtdPorCaixa: document.getElementById(`qtdPorCaixa_${i}`)?.value || "",
+            qtdPaletes: document.getElementById(`qtdPaletes_${i}`)?.value || "",
+            qtdUnidades: document.getElementById(`qtdUnidades_${i}`)?.value || ""
+        };
+    }
+
+    // 🔄 Recriar visual do zero
     container.innerHTML = "";
-    if (!qtd || qtd <= 0) return;
 
-    for (let i = 1; i <= qtd; i++) {
+    // 📌 Recriar todos os cards
+    for (let i = 1; i <= qtdNova; i++) {
         container.innerHTML += `
-            <div class="erp-card">
-                <div class="erp-card__header">
-                    <div class="erp-card__title">Remessa <span class="erp-badge">#${i}</span></div>
-                </div>
-
-                <div class="erp-card__body">
-                    <!-- Produto -->
-                    <div class="erp-section-title">Produto</div>
-                    <div class="form-grid">
-                        <div class="form-control">
-                            <label for="buscaProduto_${i}">Buscar produto</label>
-                            <div class="autocomplete-wrapper">
-                                <input type="text" id="buscaProduto_${i}" 
-                                       placeholder="Digite o nome do produto..." 
-                                       onkeyup="filtrarParaCalculoMulti(event, ${i})">
-                                <div id="listaSugestoes_${i}" class="autocomplete-list"></div>
-                            </div>
-                        </div>
-                        <div class="form-control">
-                            <label>Pesos do produto</label>
-                            <div style="display:flex; gap:16px; flex-wrap:wrap; font-weight:600; color:#2b303a;">
-                                <div>Palete: <span id="lblPesoPalete_${i}">—</span> kg</div>
-                                <div>Unidade: <span id="lblPesoUnidade_${i}">—</span> kg</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="erp-divider"></div>
-
-                    <!-- Quantidades automáticas -->
-                    <div class="erp-section-title">Quantidades automáticas</div>
-                    <div class="form-grid">
-                        <div class="form-control">
-                            <label for="qtdRemessa_${i}">Qtde Remessa (Kg ou L)</label>
-                            <input type="number" id="qtdRemessa_${i}" 
-                                   placeholder="Ex.: 120" min="0" step="1"
-                                   oninput="calcularDistribuicao(${i})">
-                        </div>
-                        <div class="form-control">
-                            <label for="qtdPorPalete_${i}">Quantidade por palete</label>
-                            <input type="number" id="qtdPorPalete_${i}" 
-                                   placeholder="Ex.: 48" min="1" step="1"
-                                   oninput="calcularDistribuicao(${i})">
-                        </div>
-                        <div class="form-control">
-                            <label for="qtdPorCaixa_${i}">Quantidade por caixa</label>
-                            <input type="number" id="qtdPorCaixa_${i}" 
-                                   placeholder="Ex.: 6" min="1" step="1"
-                                   oninput="calcularDistribuicao(${i})">
-                        </div>
-                        <div class="form-control">
-                            <label>Resultado</label>
-                            <div style="display:flex; gap:16px; flex-wrap:wrap; font-weight:600; color:#2b303a;">
-                                <div>Paletes completos: <span id="paletesCalc_${i}">—</span></div>
-                                <div>Caixas restantes: <span id="caixasCalc_${i}">—</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="erp-divider"></div>
-
-                    <!-- Ajuste manual -->
-                    <div class="erp-section-title">Ajuste manual (opcional)</div>
-                    <div class="form-grid">
-                        <div class="form-control">
-                            <label for="qtdPaletes_${i}">Qtde de paletes</label>
-                            <input type="number" id="qtdPaletes_${i}" 
-                                   placeholder="Ex.: 2" min="0" step="1"
-                                   oninput="calcularPesoTotalMulti(${i})">
-                        </div>
-                        <div class="form-control">
-                            <label for="qtdUnidades_${i}">Qtde de caixas/unidades</label>
-                            <input type="number" id="qtdUnidades_${i}" 
-                                   placeholder="Ex.: 4" min="0" step="1"
-                                   oninput="calcularPesoTotalMulti(${i})">
-                        </div>
-                    </div>
-
-                    <div class="erp-divider"></div>
-
-                    <!-- Resultado -->
-                    <div>
-                        <span class="result-inline" id="resultadoPesoTotal_${i}">
-                            Peso Total: — kg
-                        </span>
-                    </div>
-                </div>
+        <div class="erp-card">
+            <div class="erp-card__header">
+                <div class="erp-card__title">Remessa <span class="erp-badge">#${i}</span></div>
             </div>
+
+            <div class="erp-card__body">
+
+                <div class="erp-section-title">Produto</div>
+                <div class="form-grid">
+                    <div class="form-control">
+                        <label for="buscaProduto_${i}">Buscar produto</label>
+                        <div class="autocomplete-wrapper">
+                            <input type="text" id="buscaProduto_${i}" 
+                                   placeholder="Digite o nome do produto..."
+                                   onkeyup="filtrarParaCalculoMulti(event, ${i})">
+                            <div id="listaSugestoes_${i}" class="autocomplete-list"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-control">
+                        <label>Pesos do produto</label>
+                        <div style="display:flex; gap:16px; flex-wrap:wrap; font-weight:600;">
+                            <div>Palete: <span id="lblPesoPalete_${i}">—</span> kg</div>
+                            <div>Unidade: <span id="lblPesoUnidade_${i}">—</span> kg</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="erp-divider"></div>
+
+                <div class="erp-section-title">Quantidades automáticas</div>
+                <div class="form-grid">
+                    <div class="form-control">
+                        <label for="qtdRemessa_${i}">Qtde Remessa (Kg ou L)</label>
+                        <input type="number" id="qtdRemessa_${i}" min="0" step="1"
+                               oninput="calcularDistribuicao(${i})">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="qtdPorPalete_${i}">Quantidade por palete</label>
+                        <input type="number" id="qtdPorPalete_${i}" min="1" step="1"
+                               oninput="calcularDistribuicao(${i})">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="qtdPorCaixa_${i}">Quantidade por caixa</label>
+                        <input type="number" id="qtdPorCaixa_${i}" min="1" step="1"
+                               oninput="calcularDistribuicao(${i})">
+                    </div>
+
+                    <div class="form-control">
+                        <label>Resultado</label>
+                        <div style="display:flex; gap:16px; flex-wrap:wrap; font-weight:600;">
+                            <div>Paletes completos: <span id="paletesCalc_${i}">—</span></div>
+                            <div>Caixas restantes: <span id="caixasCalc_${i}">—</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="erp-divider"></div>
+
+                <div class="erp-section-title">Ajuste manual (opcional)</div>
+                <div class="form-grid">
+                    <div class="form-control">
+                        <label for="qtdPaletes_${i}">Qtde de paletes</label>
+                        <input type="number" id="qtdPaletes_${i}" min="0" step="1"
+                               oninput="calcularPesoTotalMulti(${i})">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="qtdUnidades_${i}">Qtde de caixas/unidades</label>
+                        <input type="number" id="qtdUnidades_${i}" min="0" step="1"
+                               oninput="calcularPesoTotalMulti(${i})">
+                    </div>
+                </div>
+
+                <div class="erp-divider"></div>
+
+                <div>
+                    <span class="result-inline" id="resultadoPesoTotal_${i}">
+                        Peso Total: — kg
+                    </span>
+                </div>
+
+            </div>
+        </div>
         `;
     }
+
+    // 🔄 Restaurar os dados preenchidos anteriormente
+    for (let i = 1; i <= qtdAntiga; i++) {
+        if (!dadosAntigos[i]) continue;
+
+        document.getElementById(`buscaProduto_${i}`).value = dadosAntigos[i].produto;
+        document.getElementById(`qtdRemessa_${i}`).value = dadosAntigos[i].qtdRemessa;
+        document.getElementById(`qtdPorPalete_${i}`).value = dadosAntigos[i].qtdPorPalete;
+        document.getElementById(`qtdPorCaixa_${i}`).value = dadosAntigos[i].qtdPorCaixa;
+        document.getElementById(`qtdPaletes_${i}`).value = dadosAntigos[i].qtdPaletes;
+        document.getElementById(`qtdUnidades_${i}`).value = dadosAntigos[i].qtdUnidades;
+
+        // ⚠ Recarregar pesos e recalcular
+        selecionarProdutoMulti(
+            produtos.find(p => p.descricao === dadosAntigos[i].produto)?.id,
+            i
+        );
+
+        calcularPesoTotalMulti(i);
+    }
+
+    // 🔁 Recalcular total geral
+    somarGeral();
 }
+
+
+
 
 function calcularDistribuicao(index) {
     const total = parseInt(document.getElementById(`qtdRemessa_${index}`).value) || 0;
@@ -828,30 +868,39 @@ function calcularPesoTotalMulti(index) {
     somarGeral();
 }
 
+
 function somarGeral() {
     const qtd = parseInt(document.getElementById("numRemessas").value) || 0;
     let soma = 0;
 
+    // Soma o peso de todas as remessas
     for (let i = 1; i <= qtd; i++) {
         const el = document.getElementById(`resultadoPesoTotal_${i}`);
         if (!el) continue;
+
         const texto = el.textContent || "";
         const valor = parseNumeroBR(texto.replace("Peso Total:", "").replace("kg", ""));
         if (!isNaN(valor)) soma += valor;
     }
 
+    // Soma dos paletes extras
+    const paletes = parseInt(document.getElementById("paletesExtra").value) || 0;
+    const pesoPaletesExtra = paletes * 23;
+
+    // Peso geral REAL
+    const pesoGeral = soma + pesoPaletesExtra;
+
+    // Atualiza exibição
     document.getElementById("resultadoGeral").textContent =
-        `Peso Total Geral: ${formatarBR(soma)} kg`;
+        `Peso Total Geral: ${formatarBR(pesoGeral)} kg`;
 
-     const paletes = parseInt(document.getElementById("paletesExtra").value) || 0;
-     const pesoPaletesExtra = paletes * 23;
+    // Atualiza Peso do CT
+    document.getElementById("pesoCT").value = formatarBR(pesoGeral);
 
-document.getElementById("pesoCT").value = formatarBR(soma + pesoPaletesExtra);
-
-calcularPBT();
-
-   
+    // Recalcular PBT
+    calcularPBT();
 }
+
 
 /* =============================
    CÁLCULO DE PBT
@@ -1109,7 +1158,31 @@ function gerarRelatorioArquivo() {
     previewMostrado = false;
     btn.textContent = "📄 Gerar Relatório";
 }
+/* =============================
+   RESETAR RELATÓRIO AO ALTERAR CAMPOS
+   ============================= */
 
+function resetarRelatorio() {
+    previewMostrado = false;
+
+    // Esconde o preview
+    const box = document.getElementById("relatorio");
+    if (box) {
+        box.style.display = "none";
+        box.textContent = "";
+    }
+
+    // Volta o botão ao texto original
+    const btn = document.querySelector("button[onclick='gerarRelatorioArquivo()']");
+    if (btn) btn.textContent = "📄 Gerar Relatório";
+}
+
+/* Detecta ANY alteração no sistema */
+document.addEventListener("input", () => {
+    if (previewMostrado) {
+        resetarRelatorio();
+    }
+});
 
 
 
@@ -1259,15 +1332,18 @@ const veicText = ["Veículos Permitidos:", ...veic.map(v => `- ${v}`)];
         doc.text("Remessas", areaUtil.x, cursorY);
         cursorY += 6;
 
-        const colunas = [
-            { key: "remessa", label: "Remessa", w: 18, align: "center" },
-            { key: "produto", label: "Produto", w: areaUtil.w - (18 + 28 + 26 + 26 + 24 + 30), align: "left" },
-            { key: "pesoPalete", label: "Peso Palete (kg)", w: 28, align: "right" },
-            { key: "qtdPaletes", label: "Qtde P.", w: 26, align: "right" },
-            { key: "pesoUnidade", label: "Peso Unidade (kg)", w: 26, align: "right" },
-            { key: "qtdUnidades", label: "Qtde Unidades", w: 24, align: "right" },
-            { key: "pesoTotal", label: "Peso Total (kg)", w: 30, align: "right" }
-        ];
+
+
+const colunas = [
+
+    { key: "produto", label: "Produto", w: 45, align: "left", wrap: true }, 
+    { key: "pesoPalete", label: "Palete(kg)", w: 30, align: "right" },
+    { key: "qtdPaletes", label: "Qtd P.", w: 15, align: "right" },
+    { key: "pesoUnidade", label: "P. Un.(kg)", w: 32, align: "right" },
+    { key: "qtdUnidades", label: "Qtd Unid.", w: 30, align: "right" },
+    { key: "pesoTotal", label: "P.T. (kg)", w: 25, align: "right" }
+];
+
 
         const altLinha = 7;
 
@@ -1294,30 +1370,55 @@ const veicText = ["Veículos Permitidos:", ...veic.map(v => `- ${v}`)];
             });
         }
 
-        function desenharLinhaTabela(y, linha) {
-            doc.setDrawColor(225);
-            doc.rect(areaUtil.x, y, areaUtil.w, altLinha);
 
-            doc.setFont("helvetica", "normal");
-            doc.setFontSize(10);
 
-            let x = areaUtil.x + 2;
-            colunas.forEach(col => {
-                const val = String(linha[col.key] ?? "");
-                if (col.align === "right") {
-                    const tw = doc.getTextWidth(val);
-                    doc.text(val, x + col.w - 2 - tw, y + 5);
-                } else if (col.align === "center") {
-                    const tw = doc.getTextWidth(val);
-                    doc.text(val, x + (col.w / 2) - (tw / 2), y + 5);
-                } else {
-                    const maxWidth = col.w - 4;
-                    const parts = doc.splitTextToSize(val, maxWidth);
-                    doc.text(parts[0], x, y + 5);
-                }
-                x += col.w;
-            });
+function desenharLinhaTabela(y, linha) {
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(10);
+
+    // Altura da linha da tabela
+    const h = altLinha;
+
+    // Desenha borda completa da linha
+    doc.setDrawColor(180);
+    doc.rect(areaUtil.x, y, areaUtil.w, h);
+
+    let x = areaUtil.x;
+    
+    colunas.forEach(col => {
+        const cellX = x;
+        const cellW = col.w;
+
+        // Desenha borda da célula (linha vertical)
+        doc.line(cellX, y, cellX, y + h);
+
+        let texto = String(linha[col.key] ?? "");
+
+        if (col.wrap) {
+            // para produtos longos – quebra automática
+            const maxWidth = cellW - 4;
+            const partes = doc.splitTextToSize(texto, maxWidth);
+            doc.text(partes, cellX + 2, y + 4);
+        } else {
+            // alinhamentos
+            if (col.align === "right") {
+                const tw = doc.getTextWidth(texto);
+                doc.text(texto, cellX + cellW - tw - 2, y + 5);
+            } else if (col.align === "center") {
+                const tw = doc.getTextWidth(texto);
+                doc.text(texto, cellX + (cellW / 2) - (tw / 2), y + 5);
+            } else {
+                doc.text(texto, cellX + 2, y + 5);
+            }
         }
+
+        x += cellW;
+    });
+
+    // Última linha vertical
+    doc.line(areaUtil.x + areaUtil.w, y, areaUtil.x + areaUtil.w, y + h);
+}
+
 
         if (cursorY + altLinha > altura - margem) quebraPagina();
         desenharHeaderTabela(cursorY);
@@ -1425,13 +1526,41 @@ doc.text(valor3, areaUtil.x + areaUtil.w - 2 - tw, baseY + 10);
 }
 
 // Prepara e formata linhas para a tabela do PDF
+
 function prepararLinhasRemessasPDF(remessas) {
-    // filtrar apenas remessas com dados (produto, quantidades ou totais)
     const validas = remessas.filter(r => {
-        const temDados = r.produto !== "—" || r.qtdPaletes || r.qtdUnidades || r.pesoTotal;
+        const temDados =
+            r.produto !== "—" ||
+            r.qtdPaletes ||
+            r.qtdUnidades ||
+            r.pesoTotal;
         return temDados;
     });
 
+
+
+// ➕ ADICIONAR PALETES EXTRAS COMO REMESSA NORMAL
+const paletesExtra = parseInt(document.getElementById("paletesExtra").value) || 0;
+if (paletesExtra > 0) {
+
+    const pesoUnitarioPalete = 23;
+    const pesoTotalExtra = paletesExtra * pesoUnitarioPalete;
+
+    validas.push({
+        remessa: "PAL-X",
+        produto: `PALETES EXTRAS (${paletesExtra} un)`,
+
+        // IMPORTANTÍSSIMO: usar valores numéricos e não texto formatado
+        pesoPalete: 0,
+        qtdPaletes: 0,
+        pesoUnidade: 23,
+        qtdUnidades:paletesExtra,
+        pesoTotal: pesoTotalExtra
+    });
+}
+
+
+    // 🔄 MAPEAR PARA O FORMATO DO PDF
     return validas.map(r => ({
         remessa: String(r.remessa),
         produto: r.produto || "—",
@@ -1442,6 +1571,7 @@ function prepararLinhasRemessasPDF(remessas) {
         pesoTotal: formatarBR(r.pesoTotal || 0)
     }));
 }
+
 
 /* ========= EXCEL MELHORADO ========= */
 function baixarExcel(dados) {
