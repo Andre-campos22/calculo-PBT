@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -321,11 +320,10 @@ td button{
 <input type="text" id="numeroCT" placeholder="Digite o número do CT">
 <hr>
 
-<h2>📑 Informações da Remessa</h2>
+<h2>📑 Informações do Produto</h2>
 
 <h2>📦 Cálculo de Peso Total</h2>
-
-<h3>Quantas Remessas?</h3>
+<h3>Quantos Produtos?</h3>
 <input type="number" id="numRemessas" placeholder="Digite a quantidade" min="1" oninput="gerarRemessas()">
 
 <div id="containerRemessas"></div>
@@ -622,8 +620,10 @@ function gerarRemessas() {
         container.innerHTML += `
         <div class="erp-card">
             <div class="erp-card__header">
-                <div class="erp-card__title">Remessa <span class="erp-badge">#${i}</span></div>
-            </div>
+               <div class="erp-card__title"> Produto <span class="erp-badge">#${i}</span></div>
+             </div>
+
+
 
             <div class="erp-card__body">
 
@@ -1090,7 +1090,7 @@ function montarPreviewTexto(dados) {
     let texto = `📄 RELATÓRIO GERADO\n\n`;
 
     texto += `Número do CT: ${dados.ct || "Não informado"}\n\n`;
-    texto += `Peso Total Geral das Remessas: ${formatarBR(dados.totalGeral)} kg\n\n`;
+    texto += `Peso Total Geral dos Produtos: ${formatarBR(dados.totalGeral)} kg\n\n`;
     texto += `Tara do Caminhão: ${formatarBR(dados.tara)} kg\n`;
     texto += `Peso da Carga (CT): ${formatarBR(dados.pesoCT)} kg\n`;
     texto += `PBT Total: ${formatarBR(dados.pbt)} kg\n\n`;
@@ -1329,7 +1329,7 @@ const veicText = ["Veículos Permitidos:", ...veic.map(v => `- ${v}`)];
     if (linhas.length) {
         doc.setFont("helvetica", "bold");
         doc.setFontSize(12);
-        doc.text("Remessas", areaUtil.x, cursorY);
+        doc.text("Produtos", areaUtil.x, cursorY);
         cursorY += 6;
 
 
@@ -1739,5 +1739,4 @@ function baixarExcel(dados) {
 </script>
 </body>
 </html>
-
 
