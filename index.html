@@ -435,105 +435,3470 @@ td button{
    LISTA DE PRODUTOS
    ============================= */
 let produtos = [
-    { id: "p001", descricao: "ABACUS 4X5", pesoPalete:765, pesoUnidade:24.7,qtdPorPalete:600, qtdPorCaixa:20},
-    { id: "p002", descricao: "AMPLO", pesoPalete:829, pesoUnidade:26.8,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p003", descricao: "ASSIST 10X1", pesoPalete:520, pesoUnidade:10.35,qtdPorPalete:480, qtdPorCaixa:10 },
-    { id: "p004", descricao: "ASSIST 1X20", pesoPalete:860, pesoUnidade:18.6,qtdPorPalete:900, qtdPorCaixa:20 },
-    { id: "p005", descricao: "ASSIST 4X5", pesoPalete:604, pesoUnidade:19.36,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p006", descricao: "ATIVUM 2X10", pesoPalete:720, pesoUnidade:23.23,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p007", descricao: "ATIVUM 4X5", pesoPalete:716, pesoUnidade:23.1,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p008", descricao: "AUMENAX 4X5", pesoPalete:900, pesoUnidade:29.23,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p009", descricao: "AURA 4X5 40CXS", pesoPalete:858, pesoUnidade:20.8,qtdPorPalete:800, qtdPorCaixa:20 },
-    { id: "p010", descricao: "BASAGRAN 4X5", pesoPalete:830, pesoUnidade:26.9,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p011", descricao: "BASAGRAN 600 10X1", pesoPalete:702, pesoUnidade:14.14,qtdPorPalete:480, qtdPorCaixa:10 },
-    { id: "p012", descricao: "BELYAN 2X10", pesoPalete:766, pesoUnidade:24.7,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p013", descricao: "BELYAN 2X10 36CXS IMP.", pesoPalete:907, pesoUnidade:24.5,qtdPorPalete:720, qtdPorCaixa:20 },
-    { id: "p014", descricao: "BELYAN 4X5", pesoPalete:768, pesoUnidade:24.8,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p015", descricao: "BELYAN 4X5 IMP.", pesoPalete:755, pesoUnidade:24.4 ,qtdPorPalete:600, qtdPorCaixa:20},
-    { id: "p016", descricao: "BLAVIT 2X10", pesoPalete:797, pesoUnidade:25.8,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p017", descricao: "BLAVIT 4X5", pesoPalete:784, pesoUnidade:25.36,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p018", descricao: "BLITZ 4X5", pesoPalete:464, pesoUnidade:22.05,qtdPorPalete:400, qtdPorCaixa:20 },
-    { id: "p019", descricao: "BRIGTH 4X5", pesoPalete:560, pesoUnidade:17.9,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p020", descricao: "BRIO 4X5", pesoPalete:733, pesoUnidade:23.6 ,qtdPorPalete:600, qtdPorCaixa:20},
-    { id: "p021", descricao: "BRIXOR 2X10", pesoPalete:540, pesoUnidade:17.23,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p022", descricao: "CABRIO 10X1 PALETE 48CXS", pesoPalete:605, pesoUnidade:12.12,qtdPorPalete:480, qtdPorCaixa:20 },
-    { id: "p023", descricao: "CABRIO 2X6", pesoPalete:330, pesoUnidade:12.79,qtdPorPalete:288, qtdPorCaixa:12 },
-    { id: "p024", descricao: "CANTUS 10X0,5", pesoPalete:346, pesoUnidade:13.45,qtdPorPalete:240, qtdPorCaixa:5 },
-    { id: "p025", descricao: "CARAMBA 4X5", pesoPalete:715, pesoUnidade:23.0,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p026", descricao: "COMET 4X5", pesoPalete:713, pesoUnidade:23.0,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p027", descricao: "CONTAIN 4X5", pesoPalete:744, pesoUnidade:24.0,qtdPorPalete:600, qtdPorCaixa:20},
-    { id: "p028", descricao: "DORMEX 10X1", pesoPalete:632, pesoUnidade:12.68,qtdPorPalete:480, qtdPorCaixa:10 },
-    { id: "p029", descricao: "DORMEX 200L", pesoPalete:926, pesoUnidade:225.25,qtdPorPalete:800, qtdPorCaixa:200 },
-    { id: "p030", descricao: "DORMEX 20L", pesoPalete:1044, pesoUnidade:1044.0,qtdPorPalete:900, qtdPorCaixa:20 },
-    { id: "p031", descricao: "EFFICON 4X5", pesoPalete:750, pesoUnidade:24.23,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p032", descricao: "ENTIGRIS 2X5", pesoPalete:387, pesoUnidade:12.13,qtdPorPalete:300, qtdPorCaixa:10 },
-    { id: "p033", descricao: "FASTAC 100 4X5", pesoPalete:641, pesoUnidade:26.6,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p034", descricao: "FASTAC 100SC 4X5", pesoPalete:785, pesoUnidade:25.4,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p035", descricao: "FASTAC DUO 4X5", pesoPalete:773, pesoUnidade:25.0,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p036", descricao: "FINALE 2X10", pesoPalete:746, pesoUnidade:24.1,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p037", descricao: "FLO RITRE GREEN IBC", pesoPalete:1203, pesoUnidade:1203.0,qtdPorPalete:1000, qtdPorCaixa:1 },
-    { id: "p038", descricao: "FLO RITE PRO GREEN IBC", pesoPalete:1234, pesoUnidade:1234.0,qtdPorPalete:1000, qtdPorCaixa:1},
-    { id: "p039", descricao: "FLO RITE RED IBC", pesoPalete:1187, pesoUnidade:1187.0,qtdPorPalete:1000, qtdPorCaixa:1 },
-    { id: "p040", descricao: "FLO RITE GREEN 1000L", pesoPalete:1185, pesoUnidade:1185.0,qtdPorPalete:1000, qtdPorCaixa:1 },
-    { id: "p041", descricao: "FORUM 10X1", pesoPalete:711, pesoUnidade:17.2,qtdPorPalete:480, qtdPorCaixa:10 },
-    { id: "p042", descricao: "HEAT 10X0.35", pesoPalete:332, pesoUnidade:5.14,qtdPorPalete:210, qtdPorCaixa:3.5 },
-    { id: "p043", descricao: "IMUNIT 4X5", pesoPalete:722, pesoUnidade:23.3,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p044", descricao: "KEYRA 2X10", pesoPalete:700, pesoUnidade:22.56,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p045", descricao: "KEYRA 4X5", pesoPalete:703, pesoUnidade:22.66,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p046", descricao: "KIFIX 10X0,34", pesoPalete:376, pesoUnidade:5.88,qtdPorPalete:204, qtdPorCaixa:3.4 },
-    { id: "p047", descricao: "KIFIX 10X1 40CXS", pesoPalete:510, pesoUnidade:12.17,qtdPorPalete:400, qtdPorCaixa:10 },
-    { id: "p048", descricao: "KIT CLEARFIELD 24CXS", pesoPalete:380, pesoUnidade:14.8,qtdPorPalete:24, qtdPorCaixa:1 },
-    { id: "p049", descricao: "MELYRA 10X1", pesoPalete:653, pesoUnidade:13.12,qtdPorPalete:480, qtdPorCaixa:10 },
-    { id: "p050", descricao: "MELYRA 2X10", pesoPalete:775, pesoUnidade:24.4,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p051", descricao: "MELYRA 4X5", pesoPalete:775, pesoUnidade:24.4,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p052", descricao: "MEES 10X1", pesoPalete:530, pesoUnidade:10.56,qtdPorPalete:480, qtdPorCaixa:10 },
-    { id: "p053", descricao: "MEES 1X20", pesoPalete:886, pesoUnidade:19.17,qtdPorPalete:900, qtdPorCaixa:20 },
-    { id: "p054", descricao: "MEES 4X5", pesoPalete:621, pesoUnidade:19.93,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p055", descricao: "MIBELYA 4X5", pesoPalete:773, pesoUnidade:25.0,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p056", descricao: "MUNEO 4X5", pesoPalete:782, pesoUnidade:25.3,qtdPorPalete:600, qtdPorCaixa:20 },  
-    { id: "p057", descricao: "MUNEO KIT 18CXS", pesoPalete:495, pesoUnidade:26.2,qtdPorPalete:18, qtdPorCaixa:1 },   
-    { id: "p058", descricao: "NOMOLT 10X1", pesoPalete:626, pesoUnidade:12.56,qtdPorPalete:480, qtdPorCaixa:10 },   
-    { id: "p059", descricao: "NOMOLT 4X5", pesoPalete:740, pesoUnidade:23.9,qtdPorPalete:600, qtdPorCaixa:20 },   
-    { id: "p060", descricao: "ONLY 10X1", pesoPalete:604, pesoUnidade:12.10,qtdPorPalete:480, qtdPorCaixa:10 },   
-    { id: "p061", descricao: "OPERA 10X1", pesoPalete:614, pesoUnidade:12.31,qtdPorPalete:480, qtdPorCaixa:10 },   
-    { id: "p062", descricao: "OPERA 2X10", pesoPalete:716, pesoUnidade:23.1,qtdPorPalete:600, qtdPorCaixa:20 },   
-    { id: "p063", descricao: "OPERA 4X5", pesoPalete:720, pesoUnidade:23.23,qtdPorPalete:600, qtdPorCaixa:20},   
-    { id: "p064", descricao: "ORKESTRA 10X1", pesoPalete:663, pesoUnidade:13.33,qtdPorPalete:480, qtdPorCaixa:10 },   
-    { id: "p065", descricao: "ORKESTRA 4X5", pesoPalete:784, pesoUnidade:25.36,qtdPorPalete:600, qtdPorCaixa:20 },   
-    { id: "p066", descricao: "PIRATE 10X1", pesoPalete:634, pesoUnidade:12.79,qtdPorPalete:480, qtdPorCaixa:10 },   
-    { id: "p067", descricao: "PIRATE 4X5", pesoPalete:750, pesoUnidade:24.23,qtdPorPalete:600, qtdPorCaixa:10 },   
-    { id: "p068", descricao: "PIX 4X5", pesoPalete:700, pesoUnidade:22.56,qtdPorPalete:600, qtdPorCaixa:20 },   
-    { id: "p069", descricao: "PIX 1X20", pesoPalete:1000, pesoUnidade:21.71,qtdPorPalete:900, qtdPorCaixa:20 },   
-    { id: "p070", descricao: "POLYVAR 4X5", pesoPalete:764, pesoUnidade:24.7,qtdPorPalete:600, qtdPorCaixa:20 },   
-    { id: "p071", descricao: "PONCHO 1000L", pesoPalete:1328, pesoUnidade:1328,qtdPorPalete:1000, qtdPorCaixa:1 },   
-    { id: "p072", descricao: "PONCHO 200L ", pesoPalete:1070, pesoUnidade:261.25,qtdPorPalete:800, qtdPorCaixa:200 },   
-    { id: "p073", descricao: "PROWL 10X1", pesoPalete:679, pesoUnidade:13.66,qtdPorPalete:480, qtdPorCaixa:10 },   
-    { id: "p074", descricao: "PROWL 2X10", pesoPalete:915, pesoUnidade:24.7,qtdPorPalete:720, qtdPorCaixa:20 },   
-    { id: "p075", descricao: "REGENTE DUO 4X5", pesoPalete:755, pesoUnidade:24.4,qtdPorPalete:600, qtdPorCaixa:20 },   
-    { id: "p076", descricao: "STANDAK TOP 10X1", pesoPalete:692, pesoUnidade:13.93,qtdPorPalete:480, qtdPorCaixa:10 },   
-    { id: "p077", descricao: "SELTIMA 4X5 40CXS", pesoPalete:931, pesoUnidade:22.7,qtdPorPalete:800, qtdPorCaixa:20 },   
-    { id: "p078", descricao: "SEPIRET BAG 300", pesoPalete:327, pesoUnidade:327,qtdPorPalete:300, qtdPorCaixa:1 },   
-    { id: "p079", descricao: "SISTIVA 4X5 30CXS", pesoPalete:760, pesoUnidade:24.56,qtdPorPalete:600, qtdPorCaixa:20 },
-    { id: "p080", descricao: "SISTIVA 4X5 40CXS", pesoPalete:1100, pesoUnidade:26.9,qtdPorPalete:800, qtdPorCaixa:20 },   
-    { id: "p081", descricao: "SPOT 4X5", pesoPalete:732, pesoUnidade:23.6,qtdPorPalete:600, qtdPorCaixa:20 },   
-    { id: "p082", descricao: "STANDAK 1000L", pesoPalete:1285, pesoUnidade:1285,qtdPorPalete:1000, qtdPorCaixa:1 },   
-    { id: "p083", descricao: "STANDAK 4X5", pesoPalete:823, pesoUnidade:26.6,qtdPorPalete:600, qtdPorCaixa:20 },   
-    { id: "p084", descricao: "STANDAK TOP 10X1", pesoPalete:690, pesoUnidade:13.89,qtdPorPalete:480, qtdPorCaixa:10 },   
-    { id: "p085", descricao: "STEEL 4X5", pesoPalete:650, pesoUnidade:20.9,qtdPorPalete:600, qtdPorCaixa:20 },   
-    { id: "p086", descricao: "TUTOR 25KG", pesoPalete:629, pesoUnidade:25,qtdPorPalete:600, qtdPorCaixa:25 },   
-    { id: "p087", descricao: "VALEOS 3,5", pesoPalete:331, pesoUnidade:5.13,qtdPorPalete:210, qtdPorCaixa:3.5 },   
-    { id: "p088", descricao: "VABORO 10X1 40CXS", pesoPalete:518, pesoUnidade:12.37,qtdPorPalete:400, qtdPorCaixa:10 },   
-    { id: "p089", descricao: "VELDARA 4X5", pesoPalete:788, pesoUnidade:25.5,qtdPorPalete:600, qtdPorCaixa:20 },   
-    { id: "p090", descricao: "VERSATILIS 4X5", pesoPalete:650, pesoUnidade:20.9,qtdPorPalete:600, qtdPorCaixa:20 },   
-    { id: "p091", descricao: "VOTIVO 1000L", pesoPalete:1295, pesoUnidade:1295,qtdPorPalete:1000, qtdPorCaixa:1 },   
-    { id: "p092", descricao: "ZAMPRO 10X1", pesoPalete:640, pesoUnidade:12.85,qtdPorPalete:480, qtdPorCaixa:10 },   
-    { id: "p093", descricao: "ECOLOR 50397413 2,7L", pesoPalete:718, pesoUnidade:3.99,qtdPorPalete:649.8, qtdPorCaixa:2.7 },   
-    { id: "p094", descricao: "ECOLOR 50397426 2,7L", pesoPalete:969, pesoUnidade:5.43,qtdPorPalete:649.8, qtdPorCaixa:2.7 },   
-    { id: "p095", descricao: "ECOLOR 50397427", pesoPalete:679, pesoUnidade:1.51,qtdPorPalete:432, qtdPorCaixa:0.9 },   
-    { id: "p096", descricao: "ECOLOR 50397429", pesoPalete:665, pesoUnidade:1.48,qtdPorPalete:432, qtdPorCaixa:0.9 },   
-    { id: "p097", descricao: "ECOLOR 50397430", pesoPalete:692, pesoUnidade:1.54,qtdPorPalete:432, qtdPorCaixa:0.9 },  
-    { id: "p098", descricao: "COMET 10X1", pesoPalete:604, pesoUnidade:12.10,qtdPorPalete:480, qtdPorCaixa:10 },
-	{ id: "p099", descricao: "BOSCALID 1X500KG", pesoPalete:534.4, pesoUnidade:534.4,qtdPorPalete:500, qtdPorCaixa:500 },
+ {
+    "id": "p002",
+    "descricao": "PLADOX?,4X5 L,BR",
+    "pesoPalete": 689.08,
+    "pesoUnidade": 22.96923,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p003",
+    "descricao": "POAST?,10X1 L,MX",
+    "pesoPalete": 525.64,
+    "pesoUnidade": 10.95078,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p004",
+    "descricao": "Acronis® Top 50 FS,4X5 L,CR",
+    "pesoPalete": 793.94,
+    "pesoUnidade": 26.46458,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p005",
+    "descricao": "HEAT? WG,10X0,5 KG,CO",
+    "pesoPalete": 433.05,
+    "pesoUnidade": 7.21747,
+    "qtdPorPalete": 300,
+    "qtdPorCaixa": 5
+  },
+  {
+    "id": "p006",
+    "descricao": "Heat®,GU10X0,35 KG,AR",
+    "pesoPalete": 304.5,
+    "pesoUnidade": 5.07504,
+    "qtdPorPalete": 210,
+    "qtdPorCaixa": 3.5
+  },
+  {
+    "id": "p007",
+    "descricao": "HEAT?,GU10X0,35 KG,PY",
+    "pesoPalete": 309.31,
+    "pesoUnidade": 5.15523,
+    "qtdPorPalete": 210,
+    "qtdPorCaixa": 3.5
+  },
+  {
+    "id": "p008",
+    "descricao": "Kifix®,GU10X4X0,14 KG,UY",
+    "pesoPalete": 6.88,
+    "pesoUnidade": 6.88232,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p009",
+    "descricao": "Heat®,GU10X0,15 KG,MX",
+    "pesoPalete": 190.71,
+    "pesoUnidade": 2.72436,
+    "qtdPorPalete": 105,
+    "qtdPorCaixa": 1.5
+  },
+  {
+    "id": "p010",
+    "descricao": "HEAT?,GU10X0,15 KG,CL",
+    "pesoPalete": 190.12,
+    "pesoUnidade": 2.71596,
+    "qtdPorPalete": 105,
+    "qtdPorCaixa": 1.5
+  },
+  {
+    "id": "p011",
+    "descricao": "KIFIX?,GU10X10X0,1 KG,BR",
+    "pesoPalete": 556.06,
+    "pesoUnidade": 11.58461,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p012",
+    "descricao": "Plateau?,GU10X5X0,07 KG,BR",
+    "pesoPalete": 4.72,
+    "pesoUnidade": 4.72016,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p013",
+    "descricao": "VALEOS?,10X0,35 KG,BR",
+    "pesoPalete": 311.57,
+    "pesoUnidade": 5.19278,
+    "qtdPorPalete": 210,
+    "qtdPorCaixa": 3.5
+  },
+  {
+    "id": "p014",
+    "descricao": "Heat? NA,10X0,35 KG,BR",
+    "pesoPalete": 339.25,
+    "pesoUnidade": 5.65416,
+    "qtdPorPalete": 210,
+    "qtdPorCaixa": 3.5
+  },
+  {
+    "id": "p015",
+    "descricao": "ORKESTRA?,GU10X1 L,MX",
+    "pesoPalete": 639.74,
+    "pesoUnidade": 13.32793,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p016",
+    "descricao": "Cadre® 70 DG,GU10X5X0,072 KG,AR",
+    "pesoPalete": 4.57,
+    "pesoUnidade": 4.56514,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p017",
+    "descricao": "Onduty®,10X5X0,114 KG,AR",
+    "pesoPalete": 7.15,
+    "pesoUnidade": 7.14502,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p018",
+    "descricao": "Termidor® Duo,24X0,25 L,MX",
+    "pesoPalete": 571.19,
+    "pesoUnidade": 8.15981,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p019",
+    "descricao": "Fendona® 6 SC,10X1 L,PE",
+    "pesoPalete": 571.65,
+    "pesoUnidade": 11.90942,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p020",
+    "descricao": "Ativum (TM) EC,2X10 L,BR",
+    "pesoPalete": 693.61,
+    "pesoUnidade": 23.12024,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p021",
+    "descricao": "Ativum (TM) EC,4X5 L,BR",
+    "pesoPalete": 689.63,
+    "pesoUnidade": 22.98776,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p022",
+    "descricao": "Acronis® Top FS,10X1 L,CO",
+    "pesoPalete": 670.08,
+    "pesoUnidade": 13.95999,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p023",
+    "descricao": "HEAT?,10X5X0,07 KG,MX",
+    "pesoPalete": 263.01,
+    "pesoUnidade": 4.38347,
+    "qtdPorPalete": 210,
+    "qtdPorCaixa": 3.5
+  },
+  {
+    "id": "p024",
+    "descricao": "Sunfire® 24 SC,GU10X1 L,CO",
+    "pesoPalete": 611.8,
+    "pesoUnidade": 12.74586,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p025",
+    "descricao": "Kumulus? DF,1X25 KG,BR",
+    "pesoPalete": 902.23,
+    "pesoUnidade": 25.77812,
+    "qtdPorPalete": 875,
+    "qtdPorCaixa": 25
+  },
+  {
+    "id": "p026",
+    "descricao": "SUNFIRE? 24 SC,10X1 L,AR",
+    "pesoPalete": 616.01,
+    "pesoUnidade": 12.83348,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p027",
+    "descricao": "PIRATE?,24X0,25 L,BR",
+    "pesoPalete": 585.16,
+    "pesoUnidade": 8.35945,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p028",
+    "descricao": "Sunfire® 240 SC,10X1 L,PE",
+    "pesoPalete": 613.48,
+    "pesoUnidade": 12.78083,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p029",
+    "descricao": "PIRATE?,10X1 L,BR",
+    "pesoPalete": 612.47,
+    "pesoUnidade": 12.7597,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p030",
+    "descricao": "Sunfire®,24X0,25 L,BO",
+    "pesoPalete": 574.9,
+    "pesoUnidade": 8.21283,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p031",
+    "descricao": "PIRATE?,4X5 L,BR",
+    "pesoPalete": 724.28,
+    "pesoUnidade": 24.14269,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p032",
+    "descricao": "SUNFIRE? 240 SC,10X1 L,CL",
+    "pesoPalete": 613.12,
+    "pesoUnidade": 12.77328,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p033",
+    "descricao": "SUNFIRE? 240 SC,24X0,25 L,CL",
+    "pesoPalete": 579.53,
+    "pesoUnidade": 8.279,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p034",
+    "descricao": "Sunfire® 2 SC,24X0,25 L,MX",
+    "pesoPalete": 574.81,
+    "pesoUnidade": 8.21162,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p035",
+    "descricao": "Sunfire® 2 SC,4X5 L,MX",
+    "pesoPalete": 722.04,
+    "pesoUnidade": 24.06793,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p036",
+    "descricao": "Sunfire® 2 SC,10X1 L,MX",
+    "pesoPalete": 610.58,
+    "pesoUnidade": 12.72046,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p037",
+    "descricao": "Sunfire® 240 SC,24X0,25 L,PE",
+    "pesoPalete": 574.56,
+    "pesoUnidade": 8.20803,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p038",
+    "descricao": "Fendona® 6 SC,24X0,25 L,BR",
+    "pesoPalete": 529.8,
+    "pesoUnidade": 7.56852,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p039",
+    "descricao": "NOMOLT? 150,24X0,25 L,BR",
+    "pesoPalete": 568.81,
+    "pesoUnidade": 8.12584,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p040",
+    "descricao": "Ceptiva® Duo,24X0,25 L,CR",
+    "pesoPalete": 571.29,
+    "pesoUnidade": 8.16132,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p041",
+    "descricao": "Opera® Ultra,24X0,25 L,EC",
+    "pesoPalete": 572.29,
+    "pesoUnidade": 8.17559,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p042",
+    "descricao": "ABACUS? SC,10X1 L,CO",
+    "pesoPalete": 623.83,
+    "pesoUnidade": 12.99643,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p043",
+    "descricao": "IMUNIT? 150 SC,GU10X1 L,SA",
+    "pesoPalete": 591.04,
+    "pesoUnidade": 12.31324,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p044",
+    "descricao": "Basagran® SL,GU10X1 L,CO",
+    "pesoPalete": 652.69,
+    "pesoUnidade": 13.59766,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p045",
+    "descricao": "Juwel® SC,GU4X5 L,CO",
+    "pesoPalete": 711.34,
+    "pesoUnidade": 23.71133,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p046",
+    "descricao": "Tenopa®,10X1 L,VN",
+    "pesoPalete": 577.99,
+    "pesoUnidade": 12.0414,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p047",
+    "descricao": "Vivace? 50 SC,GU4X5 L,CR",
+    "pesoPalete": 760.9,
+    "pesoUnidade": 25.36323,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p048",
+    "descricao": "Juwel®,GU10X1 L,EC",
+    "pesoPalete": 601.7,
+    "pesoUnidade": 12.53535,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p049",
+    "descricao": "Juwel® SC,GU10X1 L,CO",
+    "pesoPalete": 602.19,
+    "pesoUnidade": 12.54566,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p050",
+    "descricao": "CABRIO? TOP,10X1 KG,BR",
+    "pesoPalete": 588.6,
+    "pesoUnidade": 12.2624,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p051",
+    "descricao": "Basagran® SL,GU4X5 L,CO",
+    "pesoPalete": 776.0,
+    "pesoUnidade": 25.86667,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p052",
+    "descricao": "Priaxor®,4X5 L,UY",
+    "pesoPalete": 764.68,
+    "pesoUnidade": 25.48921,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p053",
+    "descricao": "Tenopa®,24X0,25 L,BR",
+    "pesoPalete": 529.21,
+    "pesoUnidade": 7.56015,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p054",
+    "descricao": "PIX? HC,10X1 L,MX",
+    "pesoPalete": 573.63,
+    "pesoUnidade": 11.95058,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p055",
+    "descricao": "XANTHO (TM),GU4X5 L,UY",
+    "pesoPalete": 691.64,
+    "pesoUnidade": 23.05471,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p056",
+    "descricao": "Orkestra® Ultra,GU4X5 L,CL",
+    "pesoPalete": 690.68,
+    "pesoUnidade": 23.02255,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p057",
+    "descricao": "Acrobat® MZ,GU10X1 KG,BO",
+    "pesoPalete": 528.27,
+    "pesoUnidade": 11.00565,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p058",
+    "descricao": "Orquesta® Ultra,GU4X5 L,AR",
+    "pesoPalete": 692.44,
+    "pesoUnidade": 23.08124,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p059",
+    "descricao": "Acrobat? MZ,GU10X1 KG,BR",
+    "pesoPalete": 533.96,
+    "pesoUnidade": 11.12426,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p060",
+    "descricao": "Status,4X5 L,BR",
+    "pesoPalete": 941.26,
+    "pesoUnidade": 31.37529,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p061",
+    "descricao": "ORKESTRA? ULTRA 18.1 EC,GU4X5 L,NI",
+    "pesoPalete": 694.84,
+    "pesoUnidade": 23.1613,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p062",
+    "descricao": "ORQUESTA? ULTRA,GU4X5 L,BO",
+    "pesoPalete": 693.68,
+    "pesoUnidade": 23.12254,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p063",
+    "descricao": "Orquesta® EC,GU4X5 L,CO",
+    "pesoPalete": 693.82,
+    "pesoUnidade": 23.12723,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p064",
+    "descricao": "Opera® Ultra,SP4X5 L,BR",
+    "pesoPalete": 702.36,
+    "pesoUnidade": 23.41205,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p065",
+    "descricao": "TENOPA?,GU24X0,25 L,TH",
+    "pesoPalete": 543.83,
+    "pesoUnidade": 7.76904,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p066",
+    "descricao": "RENASTE (TM),10X1 L,EC",
+    "pesoPalete": 590.56,
+    "pesoUnidade": 12.3034,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p067",
+    "descricao": "Regent® 800 WG,2X6 KG,BR",
+    "pesoPalete": 433.38,
+    "pesoUnidade": 14.44599,
+    "qtdPorPalete": 360,
+    "qtdPorCaixa": 12
+  },
+  {
+    "id": "p068",
+    "descricao": "Regent® 800 WG,10X1 KG,BR",
+    "pesoPalete": 599.77,
+    "pesoUnidade": 12.49513,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p069",
+    "descricao": "Lictus?,GU10X1 L,EC",
+    "pesoPalete": 597.11,
+    "pesoUnidade": 12.43977,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p070",
+    "descricao": "Tuit® Florestal,2X6 KG,BR",
+    "pesoPalete": 424.83,
+    "pesoUnidade": 14.16104,
+    "qtdPorPalete": 360,
+    "qtdPorCaixa": 12
+  },
+  {
+    "id": "p071",
+    "descricao": "Tuit® Florestal,10X1 KG,BR",
+    "pesoPalete": 596.01,
+    "pesoUnidade": 12.41681,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p072",
+    "descricao": "Basagran® 600,10X1 L,PE",
+    "pesoPalete": 672.92,
+    "pesoUnidade": 14.01915,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p073",
+    "descricao": "Eland? Plus,10X1 L,PE",
+    "pesoPalete": 624.45,
+    "pesoUnidade": 13.00941,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p074",
+    "descricao": "Fendona® 6 SC,GU24X0,25 L,AR",
+    "pesoPalete": 548.26,
+    "pesoUnidade": 7.83224,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p075",
+    "descricao": "Tenopa® SC,10X1 L,ZA",
+    "pesoPalete": 587.36,
+    "pesoUnidade": 12.2366,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p076",
+    "descricao": "Insignia? Super 42 SC,10X1 L,CR",
+    "pesoPalete": 634.73,
+    "pesoUnidade": 13.22348,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p077",
+    "descricao": "TENOPA? SC,24X0,25 L,ZA",
+    "pesoPalete": 540.67,
+    "pesoUnidade": 7.7238,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p078",
+    "descricao": "Fendona® 6 SC,GU10X1 L,CR",
+    "pesoPalete": 576.01,
+    "pesoUnidade": 12.00025,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p079",
+    "descricao": "TENOPA?,10X1 L,PE",
+    "pesoPalete": 572.53,
+    "pesoUnidade": 11.92765,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p080",
+    "descricao": "Abacus® HC,10X1 L,EC",
+    "pesoPalete": 622.26,
+    "pesoUnidade": 12.96366,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p081",
+    "descricao": "Priaxor?,GU4X5 L,AR",
+    "pesoPalete": 764.75,
+    "pesoUnidade": 25.49158,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p082",
+    "descricao": "Fastac® Duo SC,10X1 L,CO",
+    "pesoPalete": 636.32,
+    "pesoUnidade": 13.25661,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p083",
+    "descricao": "Fastac® Duo,10X1 L,AR",
+    "pesoPalete": 636.84,
+    "pesoUnidade": 13.26759,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p084",
+    "descricao": "Acronis® Top,10X1 L,EC",
+    "pesoPalete": 666.0,
+    "pesoUnidade": 13.875,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p085",
+    "descricao": "Pirate®,4X5 L,AR",
+    "pesoPalete": 725.08,
+    "pesoUnidade": 24.16938,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p086",
+    "descricao": "Vivace? SC,GU10X1 L,CO",
+    "pesoPalete": 640.23,
+    "pesoUnidade": 13.3381,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p087",
+    "descricao": "Zampro?,GU10X1 L,BR",
+    "pesoPalete": 601.65,
+    "pesoUnidade": 12.53444,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p088",
+    "descricao": "VERISMO?,GU10X1 L,BR",
+    "pesoPalete": 606.87,
+    "pesoUnidade": 12.64304,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p089",
+    "descricao": "Standak? Top,4X5 L,RU",
+    "pesoPalete": 794.15,
+    "pesoUnidade": 26.47177,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p090",
+    "descricao": "CANTUS,10X1 KG,EC",
+    "pesoPalete": 594.83,
+    "pesoUnidade": 12.39234,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p091",
+    "descricao": "Muneo?,4X5 L,BR",
+    "pesoPalete": 766.55,
+    "pesoUnidade": 25.55159,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p092",
+    "descricao": "Muneo®,10X1 L,BR",
+    "pesoPalete": 647.08,
+    "pesoUnidade": 13.48077,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p093",
+    "descricao": "ATIVUM (TM),4X5 L,BR",
+    "pesoPalete": 693.53,
+    "pesoUnidade": 23.11775,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p094",
+    "descricao": "ATIVUM (TM),2X10 L,BR",
+    "pesoPalete": 692.62,
+    "pesoUnidade": 23.08748,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p095",
+    "descricao": "Corbel Fungicida,10X1 L,UNSP.,BR",
+    "pesoPalete": 526.13,
+    "pesoUnidade": 10.96097,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p096",
+    "descricao": "Versatilis?,GY4X5 L,BR",
+    "pesoPalete": 624.28,
+    "pesoUnidade": 20.8093,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p097",
+    "descricao": "Sunfire®,GU10X1 L,EC",
+    "pesoPalete": 625.37,
+    "pesoUnidade": 13.02864,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p098",
+    "descricao": "Regent? Duo,4X5 L,BR",
+    "pesoPalete": 733.48,
+    "pesoUnidade": 24.44925,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p099",
+    "descricao": "Heat®,10X5X0,057 KG,EC",
+    "pesoPalete": 3.82,
+    "pesoUnidade": 3.82095,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p100",
+    "descricao": "Versatilis,10X1 L,UNSPEZ.,BR",
+    "pesoPalete": 544.97,
+    "pesoUnidade": 11.3535,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p101",
+    "descricao": "Kit: Clearfield®,1X1 ST,BR",
+    "pesoPalete": 275.02,
+    "pesoUnidade": 15.27896,
+    "qtdPorPalete": 18,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p102",
+    "descricao": "OPERA? ULTRA,4X5 L,BR",
+    "pesoPalete": 707.05,
+    "pesoUnidade": 23.56835,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p103",
+    "descricao": "COMET?,4X5 L,BR",
+    "pesoPalete": 689.98,
+    "pesoUnidade": 22.99922,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p104",
+    "descricao": "COMET? EC,10X1 L,CO",
+    "pesoPalete": 584.84,
+    "pesoUnidade": 12.18426,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p105",
+    "descricao": "Comet®,10X1 L,CL",
+    "pesoPalete": 588.92,
+    "pesoUnidade": 12.26916,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p106",
+    "descricao": "COMET?,10X1 L,UY",
+    "pesoPalete": 584.84,
+    "pesoUnidade": 12.1841,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p107",
+    "descricao": "Comet®,4X5 L,AR",
+    "pesoPalete": 689.85,
+    "pesoUnidade": 22.99485,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p108",
+    "descricao": "Jangal®,GU4X5 L,CL",
+    "pesoPalete": 717.69,
+    "pesoUnidade": 23.92291,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p109",
+    "descricao": "Juwel?,GU10X1 L,PE",
+    "pesoPalete": 597.19,
+    "pesoUnidade": 12.44146,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p110",
+    "descricao": "Headline? Pro,10X1 L,PE",
+    "pesoPalete": 586.75,
+    "pesoUnidade": 12.22395,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p111",
+    "descricao": "Priaxor®,GU4X5 L,BO",
+    "pesoPalete": 757.2,
+    "pesoUnidade": 25.23991,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p112",
+    "descricao": "Dash®,1X20 L,BR",
+    "pesoPalete": 887.5,
+    "pesoUnidade": 19.72218,
+    "qtdPorPalete": 900,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p113",
+    "descricao": "Dash?,10X1 L,BR",
+    "pesoPalete": 534.48,
+    "pesoUnidade": 11.13507,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p114",
+    "descricao": "DASH?,4X5 L,BR",
+    "pesoPalete": 620.81,
+    "pesoUnidade": 20.69382,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p115",
+    "descricao": "Bomvoro®,1X1 ST,BR",
+    "pesoPalete": 5.18,
+    "pesoUnidade": 5.17637,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p116",
+    "descricao": "Prowl? H2O,2X10 L,BR",
+    "pesoPalete": 758.74,
+    "pesoUnidade": 25.29121,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p117",
+    "descricao": "Pirate®,10X1 L,EC",
+    "pesoPalete": 613.5,
+    "pesoUnidade": 12.78124,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p118",
+    "descricao": "Verismo?,4X5 L,BR",
+    "pesoPalete": 718.62,
+    "pesoUnidade": 23.95386,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p119",
+    "descricao": "Herbadox® 400 EC,10X1 L,BR",
+    "pesoPalete": 614.15,
+    "pesoUnidade": 12.79488,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p120",
+    "descricao": "Herbadox? 400 EC,2X10 L,BR",
+    "pesoPalete": 705.95,
+    "pesoUnidade": 23.53181,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p121",
+    "descricao": "Herbadox?,10X1 L,PE",
+    "pesoPalete": 587.75,
+    "pesoUnidade": 12.24479,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p122",
+    "descricao": "Prowl? 400,2X10 L,PE",
+    "pesoPalete": 691.65,
+    "pesoUnidade": 23.05488,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p123",
+    "descricao": "Assist? EC,1X20 L,BR",
+    "pesoPalete": 831.01,
+    "pesoUnidade": 18.46691,
+    "qtdPorPalete": 900,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p124",
+    "descricao": "Assist? EC,4X5 L,BR",
+    "pesoPalete": 579.87,
+    "pesoUnidade": 19.32885,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p125",
+    "descricao": "Assist? EC,10X1 L,BR",
+    "pesoPalete": 501.1,
+    "pesoUnidade": 10.43961,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p126",
+    "descricao": "Granouro®,1X1 ST,BR",
+    "pesoPalete": 17.33,
+    "pesoUnidade": 17.32991,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p127",
+    "descricao": "Amplexus (TM),10X4X0,15 KG,BR",
+    "pesoPalete": 7.43,
+    "pesoUnidade": 7.42894,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p128",
+    "descricao": "VERSATILIS?,GU4X5 L,BR",
+    "pesoPalete": 623.09,
+    "pesoUnidade": 20.76954,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p129",
+    "descricao": "Versatilis®,GU4X5 L,BO",
+    "pesoPalete": 626.13,
+    "pesoUnidade": 20.87089,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p130",
+    "descricao": "Pendulum? Aqua,2X10 L,BR",
+    "pesoPalete": 756.82,
+    "pesoUnidade": 25.22743,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p131",
+    "descricao": "Mees (TM),1X20 L,BR",
+    "pesoPalete": 868.62,
+    "pesoUnidade": 19.30259,
+    "qtdPorPalete": 900,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p132",
+    "descricao": "Mees (TM),4X5 L,BR",
+    "pesoPalete": 631.62,
+    "pesoUnidade": 21.05406,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p133",
+    "descricao": "MEES (TM) ,10X1 L, BR",
+    "pesoPalete": 518.13,
+    "pesoUnidade": 10.79446,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p134",
+    "descricao": "Atectra?,10X1 L,BR",
+    "pesoPalete": 693.85,
+    "pesoUnidade": 14.45522,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p135",
+    "descricao": "Finale,2X10 L,BR",
+    "pesoPalete": 720.83,
+    "pesoUnidade": 24.02751,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p136",
+    "descricao": "Finale,MR 2X10 L,BR",
+    "pesoPalete": 805.97,
+    "pesoUnidade": 26.86582,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p137",
+    "descricao": "Liberty SL200,2X10 L,BR",
+    "pesoPalete": 722.53,
+    "pesoUnidade": 24.08432,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p138",
+    "descricao": "Liberty,MR 2X10 L,BR",
+    "pesoPalete": 735.83,
+    "pesoUnidade": 24.52783,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p139",
+    "descricao": "Veldara®,4X5 L,BR",
+    "pesoPalete": 765.94,
+    "pesoUnidade": 25.5314,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p140",
+    "descricao": "Heat® WG,10X0,35 KG,CO",
+    "pesoPalete": 286.05,
+    "pesoUnidade": 4.76751,
+    "qtdPorPalete": 210,
+    "qtdPorCaixa": 3.5
+  },
+  {
+    "id": "p141",
+    "descricao": "Versatilis®,GY4X5 L,PY",
+    "pesoPalete": 618.13,
+    "pesoUnidade": 20.60447,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p142",
+    "descricao": "Priaxor?,10X1 L,UY",
+    "pesoPalete": 641.02,
+    "pesoUnidade": 13.35462,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p143",
+    "descricao": "Assist®,10X1 L,BR",
+    "pesoPalete": 582.41,
+    "pesoUnidade": 12.1336,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p144",
+    "descricao": "Kumulus® DF,GU1X25 KG,BR",
+    "pesoPalete": 883.35,
+    "pesoUnidade": 25.2386,
+    "qtdPorPalete": 875,
+    "qtdPorCaixa": 25
+  },
+  {
+    "id": "p145",
+    "descricao": "KUMULUS® DF,24X1 KG,BR",
+    "pesoPalete": 25.4,
+    "pesoUnidade": 25.40262,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p146",
+    "descricao": "Assist®,1X20 L,BR",
+    "pesoPalete": 822.29,
+    "pesoUnidade": 18.27313,
+    "qtdPorPalete": 900,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p147",
+    "descricao": "ASSIST® TOP,10X1 L,BO",
+    "pesoPalete": 496.54,
+    "pesoUnidade": 10.34451,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p148",
+    "descricao": "Assist® Top,4X5 L,BO",
+    "pesoPalete": 574.63,
+    "pesoUnidade": 19.1543,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p149",
+    "descricao": "Assist®,4X5 L,BR",
+    "pesoPalete": 574.62,
+    "pesoUnidade": 19.15389,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p150",
+    "descricao": "Dash® HC,10X1 L,BR",
+    "pesoPalete": 530.85,
+    "pesoUnidade": 11.05938,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p151",
+    "descricao": "Poast®,A10X1 L,BR",
+    "pesoPalete": 529.21,
+    "pesoUnidade": 11.02516,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p152",
+    "descricao": "Poast®,A4X5 L,BR",
+    "pesoPalete": 614.52,
+    "pesoUnidade": 20.48395,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p153",
+    "descricao": "Basagran®,4X5 L,BO",
+    "pesoPalete": 801.62,
+    "pesoUnidade": 26.72063,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p154",
+    "descricao": "Basagran® 600,4X5 L,BR",
+    "pesoPalete": 805.12,
+    "pesoUnidade": 26.83748,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p155",
+    "descricao": "Basagran® 60,4X5 L,AR",
+    "pesoPalete": 800.27,
+    "pesoUnidade": 26.67576,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p156",
+    "descricao": "Pix®,4X5 L,AR",
+    "pesoPalete": 664.16,
+    "pesoUnidade": 22.13852,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p157",
+    "descricao": "PIX?,4X5 L,BO",
+    "pesoPalete": 664.08,
+    "pesoUnidade": 22.13589,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p158",
+    "descricao": "DORMEX,1X20 L,BR",
+    "pesoPalete": 1004.97,
+    "pesoUnidade": 22.33267,
+    "qtdPorPalete": 900,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p159",
+    "descricao": "DORMEX,1X200 L,BR",
+    "pesoPalete": 893.0,
+    "pesoUnidade": 223.25,
+    "qtdPorPalete": 800,
+    "qtdPorCaixa": 200
+  },
+  {
+    "id": "p160",
+    "descricao": "DORMEX,10X1 L,BR",
+    "pesoPalete": 600.22,
+    "pesoUnidade": 12.5045,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p161",
+    "descricao": "BREAK THRU,10X1 L,BR",
+    "pesoPalete": 572.73,
+    "pesoUnidade": 11.93185,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p162",
+    "descricao": "Allegro®,4X5 L,AR",
+    "pesoPalete": 712.23,
+    "pesoUnidade": 23.74084,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p163",
+    "descricao": "Acrobat? MZ,STI10X1 KG,BR",
+    "pesoPalete": 599.74,
+    "pesoUnidade": 12.49464,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p164",
+    "descricao": "Headline® Pro,24X0,25 L,PE",
+    "pesoPalete": 564.0,
+    "pesoUnidade": 8.05714,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p165",
+    "descricao": "TRIONA®,1X20 L,BR",
+    "pesoPalete": 831.39,
+    "pesoUnidade": 18.4754,
+    "qtdPorPalete": 900,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p166",
+    "descricao": "Arsenal® NA,4X5 L,BR",
+    "pesoPalete": 732.42,
+    "pesoUnidade": 24.41401,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p167",
+    "descricao": "CARAMBA® 90 SL,4X5 L,CL",
+    "pesoPalete": 693.97,
+    "pesoUnidade": 23.13249,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p168",
+    "descricao": "CHOPPER® FLORESTAL WT,A4X5 L,BR",
+    "pesoPalete": 734.91,
+    "pesoUnidade": 24.49694,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p169",
+    "descricao": "CONTAIN®,4X5 L,BR",
+    "pesoPalete": 733.71,
+    "pesoUnidade": 24.45709,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p170",
+    "descricao": "Delan® 75 WP,10X1 KG,BR",
+    "pesoPalete": 543.74,
+    "pesoUnidade": 11.32795,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p171",
+    "descricao": "FASTAC® CE,24X0,25 L,BO",
+    "pesoPalete": 488.2,
+    "pesoUnidade": 6.97428,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p172",
+    "descricao": "FASTAC® 100,4X5 L,BR",
+    "pesoPalete": 607.15,
+    "pesoUnidade": 20.23841,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p173",
+    "descricao": "FORUM®,72X0,225 KG,BR",
+    "pesoPalete": 18.67,
+    "pesoUnidade": 18.6738,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p174",
+    "descricao": "Nomolt® 150,12X0,25 L,BR",
+    "pesoPalete": 4.05,
+    "pesoUnidade": 4.05114,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p175",
+    "descricao": "TORQUE®,6X1,6 L,BR",
+    "pesoPalete": 12.22,
+    "pesoUnidade": 12.21683,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p176",
+    "descricao": "Aprinza®,4X3 L,BR",
+    "pesoPalete": 1.11,
+    "pesoUnidade": 13.2702,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 12
+  },
+  {
+    "id": "p177",
+    "descricao": "Insignia? Super 42 SC,4X5 L,CR",
+    "pesoPalete": 742.82,
+    "pesoUnidade": 24.76071,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p178",
+    "descricao": "Liberty,2X10 L,AR",
+    "pesoPalete": 722.69,
+    "pesoUnidade": 24.08951,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p179",
+    "descricao": "Ativum®,4X5 L,PY",
+    "pesoPalete": 693.65,
+    "pesoUnidade": 23.1217,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p180",
+    "descricao": "Muneo? Bio KIT,1X1 ST,BR",
+    "pesoPalete": 511.03,
+    "pesoUnidade": 28.39052,
+    "qtdPorPalete": 18,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p181",
+    "descricao": "Vivace?,10X1 L,EC",
+    "pesoPalete": 638.68,
+    "pesoUnidade": 13.3058,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p182",
+    "descricao": "Platan®,24X0,25 L,MX",
+    "pesoPalete": 581.72,
+    "pesoUnidade": 8.31034,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p183",
+    "descricao": "Fastac? Duo,4X5 L,CL",
+    "pesoPalete": 749.76,
+    "pesoUnidade": 24.99209,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p184",
+    "descricao": "Imunit?,4X5 L,BR",
+    "pesoPalete": 697.83,
+    "pesoUnidade": 23.261,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p185",
+    "descricao": "Tenopa? 60 SC,IND10X1 L,EC",
+    "pesoPalete": 573.43,
+    "pesoUnidade": 11.94642,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p186",
+    "descricao": "Fendona? 6 SC,TD-IND10X1 L,EC",
+    "pesoPalete": 572.87,
+    "pesoUnidade": 11.93489,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p187",
+    "descricao": "Versatilis® Plus 10l+5l,1X1 ST,BR",
+    "pesoPalete": 20.54,
+    "pesoUnidade": 20.53864,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p188",
+    "descricao": "Assist® Top EC,10X1 L,BO",
+    "pesoPalete": 500.94,
+    "pesoUnidade": 10.43623,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p189",
+    "descricao": "Assist® Top EC,4X5 L,BO",
+    "pesoPalete": 576.56,
+    "pesoUnidade": 19.21857,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p190",
+    "descricao": "Liberty®,2X10 L,PY",
+    "pesoPalete": 716.7,
+    "pesoUnidade": 23.89016,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p191",
+    "descricao": "Platan®,10X1 L,MX",
+    "pesoPalete": 610.42,
+    "pesoUnidade": 12.71705,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p192",
+    "descricao": "Bomvoro?,1X1 ST,BR",
+    "pesoPalete": 3.47,
+    "pesoUnidade": 3.47427,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p193",
+    "descricao": "Veltroma®,10X0,35 KG,PY",
+    "pesoPalete": 312.4,
+    "pesoUnidade": 5.2066,
+    "qtdPorPalete": 210,
+    "qtdPorCaixa": 3.5
+  },
+  {
+    "id": "p194",
+    "descricao": "Adjeva?,10X0,35 KG,AR",
+    "pesoPalete": 307.08,
+    "pesoUnidade": 5.11802,
+    "qtdPorPalete": 210,
+    "qtdPorCaixa": 3.5
+  },
+  {
+    "id": "p195",
+    "descricao": "Abacus? SC,4X5 L,CO",
+    "pesoPalete": 735.66,
+    "pesoUnidade": 24.52202,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p196",
+    "descricao": "Nepaxir?,4X5 L,BR",
+    "pesoPalete": 751.84,
+    "pesoUnidade": 25.06142,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p197",
+    "descricao": "Nomolt? 150,4X5 L,BR",
+    "pesoPalete": 713.56,
+    "pesoUnidade": 23.78546,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p198",
+    "descricao": "NOMOLT 150,10X1",
+    "pesoPalete": 604.74,
+    "pesoUnidade": 12.59881,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p199",
+    "descricao": "Nomolt® 150,24X0,25 L,BR",
+    "pesoPalete": 582.67,
+    "pesoUnidade": 8.32382,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p200",
+    "descricao": "CARAMBA® 90,4X5 L,BR",
+    "pesoPalete": 693.27,
+    "pesoUnidade": 23.10915,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p201",
+    "descricao": "Belyan®,GU4X5 L,BR",
+    "pesoPalete": 743.13,
+    "pesoUnidade": 24.77116,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p202",
+    "descricao": "Vaboro?,10X10X0,1 KG,BR",
+    "pesoPalete": 558.14,
+    "pesoUnidade": 11.62795,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p203",
+    "descricao": "Seltima®,GU4X5 L,BR",
+    "pesoPalete": 690.69,
+    "pesoUnidade": 23.02297,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p204",
+    "descricao": "Blavity?,4X5 L,BR",
+    "pesoPalete": 764.83,
+    "pesoUnidade": 25.49439,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p205",
+    "descricao": "Blavity?,2X10 L,BR",
+    "pesoPalete": 762.17,
+    "pesoUnidade": 25.40561,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p206",
+    "descricao": "CARAMBA®,4X5 L,UY",
+    "pesoPalete": 696.67,
+    "pesoUnidade": 23.22222,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p207",
+    "descricao": "Corbel,GU4X5 L,EC",
+    "pesoPalete": 311.06,
+    "pesoUnidade": 10.3687,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p208",
+    "descricao": "Juwel? 25 SC,GU10X1 L,CR",
+    "pesoPalete": 602.84,
+    "pesoUnidade": 12.5592,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p209",
+    "descricao": "Juwel? 25 SC,GU2X10 L,CR",
+    "pesoPalete": 711.39,
+    "pesoUnidade": 23.71286,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p210",
+    "descricao": " Belanty®,TA4X5 L,BR",
+    "pesoPalete": 749.25,
+    "pesoUnidade": 24.97501,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p211",
+    "descricao": "Belyan?,TA4X5 L,BR",
+    "pesoPalete": 0.0,
+    "pesoUnidade": 0,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p212",
+    "descricao": "Basta® 200 SL,10X1 L,TT",
+    "pesoPalete": 584.84,
+    "pesoUnidade": 12.18412,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p213",
+    "descricao": "Basta®,TAG10X1 L,PE",
+    "pesoPalete": 612.51,
+    "pesoUnidade": 12.76071,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p214",
+    "descricao": "Melyra®,GU10X1 L,BR",
+    "pesoPalete": 627.64,
+    "pesoUnidade": 13.0759,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p215",
+    "descricao": "Mibelya®,GU10X1 L,BR",
+    "pesoPalete": 619.76,
+    "pesoUnidade": 12.91158,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p216",
+    "descricao": "Mibelya®,GU4X5 L,BR",
+    "pesoPalete": 740.03,
+    "pesoUnidade": 24.66779,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p217",
+    "descricao": "Keyra®,2X10 L,BR",
+    "pesoPalete": 671.57,
+    "pesoUnidade": 22.38573,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p218",
+    "descricao": "Keyra®,4X5 L,BR",
+    "pesoPalete": 672.42,
+    "pesoUnidade": 22.41412,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p219",
+    "descricao": "PIRATE®,24X0,25 L,BR",
+    "pesoPalete": 574.78,
+    "pesoUnidade": 8.21116,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p220",
+    "descricao": "DRIVER (TM),4X5 L,BR",
+    "pesoPalete": 676.6,
+    "pesoUnidade": 22.55333,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p221",
+    "descricao": "Belyan®,GU2X10 L,BR",
+    "pesoPalete": 737.12,
+    "pesoUnidade": 24.57078,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p222",
+    "descricao": "Blitz?,4X5 KG,BR",
+    "pesoPalete": 662.9,
+    "pesoUnidade": 22.09672,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p223",
+    "descricao": "Melyra®,GU2X10 L,BR",
+    "pesoPalete": 735.96,
+    "pesoUnidade": 24.53215,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p224",
+    "descricao": "Basagran?,GU10X1 L,CL",
+    "pesoPalete": 656.26,
+    "pesoUnidade": 13.67218,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p225",
+    "descricao": "Melyra®,GU4X5 L,BR",
+    "pesoPalete": 740.92,
+    "pesoUnidade": 24.69728,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p226",
+    "descricao": "Herbadox®,2X10 L,PE",
+    "pesoPalete": 687.82,
+    "pesoUnidade": 22.9274,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p227",
+    "descricao": "Muneo® Bio: KIT,1X1 ST,BR",
+    "pesoPalete": 472.27,
+    "pesoUnidade": 26.23696,
+    "qtdPorPalete": 18,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p228",
+    "descricao": "Entigris®,2X5 KG,BR",
+    "pesoPalete": 360.13,
+    "pesoUnidade": 12.0044,
+    "qtdPorPalete": 300,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p229",
+    "descricao": "Entigris®,GU10X1 KG,BR",
+    "pesoPalete": 570.71,
+    "pesoUnidade": 11.88974,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p230",
+    "descricao": "Prowl® H2O,GU10X1 L,BR",
+    "pesoPalete": 679.41,
+    "pesoUnidade": 14.1544,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p231",
+    "descricao": "Delan®,10X1 KG,BR",
+    "pesoPalete": 460.58,
+    "pesoUnidade": 9.59538,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p232",
+    "descricao": "Entigris? WG,GU10X1 KG,CO",
+    "pesoPalete": 582.3,
+    "pesoUnidade": 12.13125,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p233",
+    "descricao": "Pix? 50,4X5 L,BO",
+    "pesoPalete": 662.78,
+    "pesoUnidade": 22.09259,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p234",
+    "descricao": "Prowl® 400,2X10 L,PE",
+    "pesoPalete": 691.74,
+    "pesoUnidade": 23.05788,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p235",
+    "descricao": "Orkestra (TM) SC,2X10 L,PK",
+    "pesoPalete": 757.0,
+    "pesoUnidade": 25.23333,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p236",
+    "descricao": "Provisia? 50 EC,4X5 L,BR",
+    "pesoPalete": 629.91,
+    "pesoUnidade": 20.99686,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p237",
+    "descricao": "Keyra (TM),GU4X5 L,PY",
+    "pesoPalete": 671.44,
+    "pesoUnidade": 22.38136,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p238",
+    "descricao": "Acrobat® CT 60 SC,GU4X5 L,CR",
+    "pesoPalete": 815.32,
+    "pesoUnidade": 27.1773,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p239",
+    "descricao": "Acrobat® CT 60 SC,10X1 L,CR",
+    "pesoPalete": 689.45,
+    "pesoUnidade": 14.36364,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p240",
+    "descricao": "Optill?,10X10X0,1 KG,PY",
+    "pesoPalete": 558.4,
+    "pesoUnidade": 11.63333,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p241",
+    "descricao": "Corbel,1X20 L,EC",
+    "pesoPalete": 892.48,
+    "pesoUnidade": 19.83291,
+    "qtdPorPalete": 900,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p242",
+    "descricao": "VINQUO®,GU10X1L,BR",
+    "pesoPalete": 567.15,
+    "pesoUnidade": 11.81553,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p243",
+    "descricao": "Comet®,SP4X5 L,BR",
+    "pesoPalete": 698.12,
+    "pesoUnidade": 23.27055,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p244",
+    "descricao": "Fastac® Duo,4X5 L,AR",
+    "pesoPalete": 0.0,
+    "pesoUnidade": 0,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p245",
+    "descricao": "Palyvar® GU4X5 L,PY",
+    "pesoPalete": 738.09,
+    "pesoUnidade": 24.60307,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p246",
+    "descricao": "Melyra® SC,GU4X5 L,CO",
+    "pesoPalete": 749.0,
+    "pesoUnidade": 24.96666,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p247",
+    "descricao": "Melyra® SC,GU10X1 L,CO",
+    "pesoPalete": 624.71,
+    "pesoUnidade": 13.01485,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p248",
+    "descricao": "Crelyon® 40 SC,GU10X1 L,CR",
+    "pesoPalete": 629.29,
+    "pesoUnidade": 13.11024,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p249",
+    "descricao": "Avyte® SC,GU10X1 L,CO",
+    "pesoPalete": 629.62,
+    "pesoUnidade": 13.11705,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p250",
+    "descricao": "Optill®,10X5X0,1 KG,PY",
+    "pesoPalete": 6.43,
+    "pesoUnidade": 6.43062,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p251",
+    "descricao": "Cevya®,GU10X1 L,UY",
+    "pesoPalete": 627.5,
+    "pesoUnidade": 13.07291,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p252",
+    "descricao": "Belanty® SC,GU10X1 L,MX",
+    "pesoPalete": 633.39,
+    "pesoUnidade": 13.19567,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p253",
+    "descricao": "Crelyon®,GU10X1 L,MX",
+    "pesoPalete": 631.36,
+    "pesoUnidade": 13.15325,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p254",
+    "descricao": "Mibelya®SC,GU10X1 L,PE",
+    "pesoPalete": 627.27,
+    "pesoUnidade": 13.06819,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p255",
+    "descricao": "Belanty® 40 SC,GU10X1 L,CR",
+    "pesoPalete": 632.63,
+    "pesoUnidade": 13.17971,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p256",
+    "descricao": "Avyte® SC,GU4X5 L,CO",
+    "pesoPalete": 743.64,
+    "pesoUnidade": 24.78794,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p257",
+    "descricao": "Kifix?,10X0,34 KG,BR",
+    "pesoPalete": 332.92,
+    "pesoUnidade": 5.54871,
+    "qtdPorPalete": 204,
+    "qtdPorCaixa": 3.4
+  },
+  {
+    "id": "p258",
+    "descricao": "Collis®,GU10X1 L,BR",
+    "pesoPalete": 597.56,
+    "pesoUnidade": 12.44925,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p259",
+    "descricao": "Forum®,40X0,12 KG,BR",
+    "pesoPalete": 5.86,
+    "pesoUnidade": 5.85851,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p260",
+    "descricao": "Acronis®,10X1 L,AR",
+    "pesoPalete": 658.54,
+    "pesoUnidade": 13.71952,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p261",
+    "descricao": "Acronis®,4X5 L,AR",
+    "pesoPalete": 785.82,
+    "pesoUnidade": 26.19395,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p262",
+    "descricao": "Sharpen® Herbicide,10X1 KG,AU",
+    "pesoPalete": 589.11,
+    "pesoUnidade": 12.27311,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p263",
+    "descricao": "Sharpen®,GU10X1 KG,NZ",
+    "pesoPalete": 576.37,
+    "pesoUnidade": 12.00766,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p264",
+    "descricao": "Votivo® Prime,4X5 L,BR",
+    "pesoPalete": 805.91,
+    "pesoUnidade": 26.86377,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p265",
+    "descricao": "Efficon®,4X5 L,BR",
+    "pesoPalete": 721.12,
+    "pesoUnidade": 24.03747,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p266",
+    "descricao": "Opera®,4X5 L,BO",
+    "pesoPalete": 0.0,
+    "pesoUnidade": 0,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p267",
+    "descricao": "Opera®,2X10 L,BR",
+    "pesoPalete": 693.61,
+    "pesoUnidade": 23.12037,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p268",
+    "descricao": "Opera® SC,10X1 L,CO",
+    "pesoPalete": 588.39,
+    "pesoUnidade": 12.2581,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p269",
+    "descricao": "Renaste®,4X5 L,AR",
+    "pesoPalete": 688.78,
+    "pesoUnidade": 22.95946,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p270",
+    "descricao": "Opera® 18.3 SE,10X1 L,CR",
+    "pesoPalete": 592.06,
+    "pesoUnidade": 12.33454,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p271",
+    "descricao": "Opera® 18.3 SE,4X5 L,CR",
+    "pesoPalete": 0.0,
+    "pesoUnidade": 0,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p272",
+    "descricao": "Opera®,10X1 L,PE",
+    "pesoPalete": 592.42,
+    "pesoUnidade": 12.34212,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p273",
+    "descricao": "Supresial®,2X10 L,BO",
+    "pesoPalete": 718.53,
+    "pesoUnidade": 23.95093,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p274",
+    "descricao": "Dart® 15 SC,GU10X1 L,CO",
+    "pesoPalete": 610.33,
+    "pesoUnidade": 12.71527,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p275",
+    "descricao": "Nomolt® 150 SC,GU10X1 L,PY",
+    "pesoPalete": 598.96,
+    "pesoUnidade": 12.47842,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p276",
+    "descricao": "Nomolt®,GU10X1 L,EC",
+    "pesoPalete": 608.85,
+    "pesoUnidade": 12.68441,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p277",
+    "descricao": "Nomolt® 15 SC,GU10X1 L,CR",
+    "pesoPalete": 612.0,
+    "pesoUnidade": 12.74999,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p278",
+    "descricao": "Kilymos®,4X5 L,BR",
+    "pesoPalete": 723.44,
+    "pesoUnidade": 24.1147,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p279",
+    "descricao": "Break Thru,24X0,25 L,BR",
+    "pesoPalete": 536.82,
+    "pesoUnidade": 7.66889,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p280",
+    "descricao": "Perenion®,4X5 L,BR",
+    "pesoPalete": 873.69,
+    "pesoUnidade": 29.12294,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p281",
+    "descricao": "COLLIS®,10X1 L,BR",
+    "pesoPalete": 628.64,
+    "pesoUnidade": 13.09669,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p282",
+    "descricao": "FORUM® PLUS,10X1 L,BR",
+    "pesoPalete": 688.25,
+    "pesoUnidade": 14.33851,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p283",
+    "descricao": "CABRIO® TOP,2X6 KG,BR",
+    "pesoPalete": 329.75,
+    "pesoUnidade": 13.73978,
+    "qtdPorPalete": 288,
+    "qtdPorCaixa": 12
+  },
+  {
+    "id": "p284",
+    "descricao": "Crelyon®,10X1 L,EC",
+    "pesoPalete": 0.0,
+    "pesoUnidade": 0,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p285",
+    "descricao": "Durance® S,10X5X0,07 KG,BR",
+    "pesoPalete": 4.61,
+    "pesoUnidade": 4.6113,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p286",
+    "descricao": "Plateau®,MN10X5X0,07 KG,BR",
+    "pesoPalete": 4.53,
+    "pesoUnidade": 4.52874,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p287",
+    "descricao": "ALLEGRO®,2X10 L,UY",
+    "pesoPalete": 712.13,
+    "pesoUnidade": 23.73753,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p288",
+    "descricao": "Stroby® SC,10X1 L,BR",
+    "pesoPalete": 620.14,
+    "pesoUnidade": 12.91967,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p289",
+    "descricao": "DUETT®,2X10 L,CL",
+    "pesoPalete": 709.5,
+    "pesoUnidade": 23.64988,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p290",
+    "descricao": "DUETT® 25 SC,2X10 L,CR",
+    "pesoPalete": 713.52,
+    "pesoUnidade": 23.78384,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p291",
+    "descricao": "SWING® 250 SC,2X10 L,UY",
+    "pesoPalete": 711.0,
+    "pesoUnidade": 23.69999,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p292",
+    "descricao": "DUETT?,10X1 L,BO",
+    "pesoPalete": 607.37,
+    "pesoUnidade": 12.65364,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p293",
+    "descricao": "DUETT®,10X1 L,CL",
+    "pesoPalete": 607.6,
+    "pesoUnidade": 12.6583,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p294",
+    "descricao": "DUETT® 25 SC,10X1 L,CR",
+    "pesoPalete": 607.29,
+    "pesoUnidade": 12.65191,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p295",
+    "descricao": "DUETT® SC,10X1 L,CO",
+    "pesoPalete": 605.76,
+    "pesoUnidade": 12.62009,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p296",
+    "descricao": "Opera®,GU4X5 L,BR",
+    "pesoPalete": 694.62,
+    "pesoUnidade": 23.15414,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p297",
+    "descricao": "OPERA® SC,4X5 L,CO",
+    "pesoPalete": 694.22,
+    "pesoUnidade": 23.14077,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p298",
+    "descricao": "Plateau®,10X1 KG,BR",
+    "pesoPalete": 585.85,
+    "pesoUnidade": 12.20517,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p299",
+    "descricao": "Kifix®,10X1 KG,AR",
+    "pesoPalete": 557.07,
+    "pesoUnidade": 11.60555,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p300",
+    "descricao": "Vaboro®,10X1 KG,BR",
+    "pesoPalete": 589.14,
+    "pesoUnidade": 12.27373,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p301",
+    "descricao": "Corbel,2X10 L,EC",
+    "pesoPalete": 619.28,
+    "pesoUnidade": 20.64265,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p302",
+    "descricao": "Corbel EC,2X10 L,CO",
+    "pesoPalete": 615.32,
+    "pesoUnidade": 20.5106,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p303",
+    "descricao": "Comet® EC,10X1 L,CO",
+    "pesoPalete": 579.78,
+    "pesoUnidade": 12.07872,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p304",
+    "descricao": "Durance® S,10X1 KG,BR",
+    "pesoPalete": 572.51,
+    "pesoUnidade": 11.92728,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p305",
+    "descricao": "Pix® HC,1X20 L,BR",
+    "pesoPalete": 960.08,
+    "pesoUnidade": 21.33512,
+    "qtdPorPalete": 900,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p306",
+    "descricao": "ONLY®,10X1 L,BR",
+    "pesoPalete": 584.38,
+    "pesoUnidade": 12.17458,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p307",
+    "descricao": "STROBY® SC,24X0,25 L,CO",
+    "pesoPalete": 6944.1,
+    "pesoUnidade": 99.20147,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p308",
+    "descricao": "Regent? 20 GR,10X1 KG,BR",
+    "pesoPalete": 581.58,
+    "pesoUnidade": 12.11619,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p309",
+    "descricao": "CARAMBA® 90,10X1 L,BR",
+    "pesoPalete": 590.11,
+    "pesoUnidade": 12.29399,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p310",
+    "descricao": "ARAMO,4X5 L,CL",
+    "pesoPalete": 680.72,
+    "pesoUnidade": 22.69053,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p311",
+    "descricao": "OPERA? SC,24X0,25 L,CO",
+    "pesoPalete": 562.38,
+    "pesoUnidade": 8.03398,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p312",
+    "descricao": "ARAMO,10X1 L,CL",
+    "pesoPalete": 579.87,
+    "pesoUnidade": 12.08068,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p313",
+    "descricao": "Fastac® 100 SC,10X1 L,BR",
+    "pesoPalete": 584.09,
+    "pesoUnidade": 12.16862,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p314",
+    "descricao": "Nomolt® 150,10X1 L,BR",
+    "pesoPalete": 603.22,
+    "pesoUnidade": 12.56698,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p315",
+    "descricao": "TALCORD® ARROZ,10X1 L,BR",
+    "pesoPalete": 580.19,
+    "pesoUnidade": 12.08724,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p316",
+    "descricao": "ALLEGRO?,GU4X5 L,PY",
+    "pesoPalete": 713.09,
+    "pesoUnidade": 23.76965,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p317",
+    "descricao": "Herbadox®,10X1 L,PE",
+    "pesoPalete": 588.92,
+    "pesoUnidade": 12.26923,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p318",
+    "descricao": "Prowl® 400,10X1 L,PE",
+    "pesoPalete": 0.0,
+    "pesoUnidade": 0,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p319",
+    "descricao": "ONLY®,4X5 L,BR",
+    "pesoPalete": 704.7,
+    "pesoUnidade": 23.49008,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p320",
+    "descricao": "SUNFIRE® 240 SC DB,24X0,25 L,PE",
+    "pesoPalete": 574.09,
+    "pesoUnidade": 8.20126,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p321",
+    "descricao": "SUNFIRE® 240 SC DB,10X1 L,EC",
+    "pesoPalete": 616.32,
+    "pesoUnidade": 12.83993,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p322",
+    "descricao": "SUNFIRE® 2 SC DB,24X0,25 L,MX",
+    "pesoPalete": 582.15,
+    "pesoUnidade": 8.31636,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p323",
+    "descricao": "SUNFIRE® 24 SC DB,10X1 L,UY",
+    "pesoPalete": 619.2,
+    "pesoUnidade": 12.9,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p324",
+    "descricao": "ACROBAT® CT DB,10X1 L,MX",
+    "pesoPalete": 701.79,
+    "pesoUnidade": 14.62071,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p325",
+    "descricao": "OPERA,24X0,25 L,PE",
+    "pesoPalete": 562.56,
+    "pesoUnidade": 8.03656,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p326",
+    "descricao": "VIRTUE®,4X5 L,BR",
+    "pesoPalete": 687.91,
+    "pesoUnidade": 22.93044,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p327",
+    "descricao": "FENDONA? 6 SC,12X0,25 L,BR",
+    "pesoPalete": 3.8,
+    "pesoUnidade": 3.80281,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p328",
+    "descricao": "SUNFIRE® DB,24X0,25 L,BO",
+    "pesoPalete": 580.75,
+    "pesoUnidade": 8.29642,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p329",
+    "descricao": "Imunit®,10X1 L,AR",
+    "pesoPalete": 590.95,
+    "pesoUnidade": 12.31149,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p330",
+    "descricao": "IMUNIT (TM),10X1 L,BR",
+    "pesoPalete": 592.54,
+    "pesoUnidade": 12.34451,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p331",
+    "descricao": "AURA? 200,OP4X5 L,BR",
+    "pesoPalete": 647.67,
+    "pesoUnidade": 21.58902,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p332",
+    "descricao": "FENDONA? 6 SC,10X1 L,CL",
+    "pesoPalete": 576.81,
+    "pesoUnidade": 12.01691,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p333",
+    "descricao": "Fastac® 100 SC,4X5 L,BR",
+    "pesoPalete": 689.55,
+    "pesoUnidade": 22.98486,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p334",
+    "descricao": "SUNFIRE? 240 SC LC,10X1 L,CL",
+    "pesoPalete": 624.33,
+    "pesoUnidade": 13.00691,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p335",
+    "descricao": "OPERA?,24X0,25 L,EC",
+    "pesoPalete": 554.9,
+    "pesoUnidade": 7.9272,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p336",
+    "descricao": "Dash® HC,4X5 L,CL",
+    "pesoPalete": 614.06,
+    "pesoUnidade": 20.46878,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p337",
+    "descricao": "DASH® HC,1X20 L,BR",
+    "pesoPalete": 878.37,
+    "pesoUnidade": 19.51924,
+    "qtdPorPalete": 900,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p338",
+    "descricao": "FOCUS WP,10X0,18 KG,BR",
+    "pesoPalete": 3.27,
+    "pesoUnidade": 3.27369,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p339",
+    "descricao": "Basagran® 480,4X5 L,BR",
+    "pesoPalete": 778.38,
+    "pesoUnidade": 25.94608,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p340",
+    "descricao": "Brio®,10X1 L,BR",
+    "pesoPalete": 605.98,
+    "pesoUnidade": 12.6245,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p341",
+    "descricao": "BRIO?,4X5 L,BR",
+    "pesoPalete": 713.6,
+    "pesoUnidade": 23.78654,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p342",
+    "descricao": "AMPLO®,10X1 L,BR",
+    "pesoPalete": 649.6,
+    "pesoUnidade": 13.53333,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p343",
+    "descricao": "AMPLO®,4X5 L,BR",
+    "pesoPalete": 825.06,
+    "pesoUnidade": 27.50213,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p344",
+    "descricao": "STAGE® 50,4X5 L,BR",
+    "pesoPalete": 671.25,
+    "pesoUnidade": 22.375,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p345",
+    "descricao": "CANTUS®,10X0,5 KG,BR",
+    "pesoPalete": 332.15,
+    "pesoUnidade": 6.91973,
+    "qtdPorPalete": 240,
+    "qtdPorCaixa": 5
+  },
+  {
+    "id": "p346",
+    "descricao": "STANDAK® TOP,4X5 L,BR",
+    "pesoPalete": 795.42,
+    "pesoUnidade": 26.51401,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p347",
+    "descricao": "STANDAK® TOP,10X1 L,BR",
+    "pesoPalete": 670.43,
+    "pesoUnidade": 13.96738,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p348",
+    "descricao": "ZELLUS SC,4X5 L,BR",
+    "pesoPalete": 719.17,
+    "pesoUnidade": 23.97222,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p349",
+    "descricao": "CARAMBA® 90 SL,10X1 L,CO",
+    "pesoPalete": 575.08,
+    "pesoUnidade": 11.98077,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p350",
+    "descricao": "Cantus®,10X1 KG,CL",
+    "pesoPalete": 591.79,
+    "pesoUnidade": 12.32894,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p351",
+    "descricao": "Cantus® WG,10X1 KG,EC",
+    "pesoPalete": 0.0,
+    "pesoUnidade": 0,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p352",
+    "descricao": "Cantus®,AN10X1 KG,MX",
+    "pesoPalete": 591.64,
+    "pesoUnidade": 12.32582,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p353",
+    "descricao": "ARAMO® 200 (BR),A4X5 L,BR",
+    "pesoPalete": 676.23,
+    "pesoUnidade": 22.54106,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p354",
+    "descricao": "ARAMO® 200 (BR),A10X1 L,BR",
+    "pesoPalete": 581.03,
+    "pesoUnidade": 12.10484,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p355",
+    "descricao": "PIX® HC,10X1 L,BR",
+    "pesoPalete": 575.42,
+    "pesoUnidade": 11.98794,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p356",
+    "descricao": "Cabrio® Top,OP10X1 KG,BR",
+    "pesoPalete": 593.28,
+    "pesoUnidade": 12.36003,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p357",
+    "descricao": "Polyram® DF,10X1 KG,BR",
+    "pesoPalete": 534.62,
+    "pesoUnidade": 11.13787,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p358",
+    "descricao": "Cantus®,24X0,15 KG,BR",
+    "pesoPalete": 5.52,
+    "pesoUnidade": 5.52023,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p359",
+    "descricao": "BLITZ®,30X0,5 KG,BR",
+    "pesoPalete": 16.36,
+    "pesoUnidade": 16.35833,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p360",
+    "descricao": "Blitz® Mips,4X5 KG,BR",
+    "pesoPalete": 689.17,
+    "pesoUnidade": 22.97236,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p361",
+    "descricao": "FENDONA 6 SC,24X0,25 L,BO",
+    "pesoPalete": 0.0,
+    "pesoUnidade": 0,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p362",
+    "descricao": "Cantus WG,10X1 KG,CO",
+    "pesoPalete": 588.5,
+    "pesoUnidade": 12.26033,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p363",
+    "descricao": "ENVOY®,4X5 L,BR",
+    "pesoPalete": 682.52,
+    "pesoUnidade": 22.75069,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p364",
+    "descricao": "Expander® 150 SC,10X1 L,CO",
+    "pesoPalete": 590.79,
+    "pesoUnidade": 12.30806,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p365",
+    "descricao": "PROOF®,1X20 L,BR",
+    "pesoPalete": 1074.05,
+    "pesoUnidade": 23.86777,
+    "qtdPorPalete": 900,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p366",
+    "descricao": "CARAMBA? 9 SL,10X1 L,CR",
+    "pesoPalete": 593.0,
+    "pesoUnidade": 12.35416,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p367",
+    "descricao": "Amulet®,4X5 L,BR",
+    "pesoPalete": 733.56,
+    "pesoUnidade": 24.45196,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p368",
+    "descricao": "Polyram® DF,1X20 KG,BR",
+    "pesoPalete": 947.16,
+    "pesoUnidade": 21.048,
+    "qtdPorPalete": 900,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p369",
+    "descricao": "Herbadox® 400 EC,2X10 L,BR",
+    "pesoPalete": 697.0,
+    "pesoUnidade": 23.23333,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p370",
+    "descricao": "Nomolt® 150,4X5 L,BR",
+    "pesoPalete": 712.14,
+    "pesoUnidade": 23.73784,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p371",
+    "descricao": "OPERA?,10X1 L,MX",
+    "pesoPalete": 596.16,
+    "pesoUnidade": 12.42009,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p372",
+    "descricao": "VIVARUS (TM),4X5 L,AR",
+    "pesoPalete": 694.66,
+    "pesoUnidade": 23.15536,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p373",
+    "descricao": "SUNFIRE®,10X1 L,BR",
+    "pesoPalete": 628.68,
+    "pesoUnidade": 13.09743,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p374",
+    "descricao": "VIVARUS (TM),10X1 L,AR",
+    "pesoPalete": 589.27,
+    "pesoUnidade": 12.27646,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p375",
+    "descricao": "HEADLINE® PRO,10X1 L,PE",
+    "pesoPalete": 582.8,
+    "pesoUnidade": 12.14177,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p376",
+    "descricao": "KUMULUS? DF - AG,1X25 KG,BR",
+    "pesoPalete": 888.28,
+    "pesoUnidade": 25.37946,
+    "qtdPorPalete": 875,
+    "qtdPorCaixa": 25
+  },
+  {
+    "id": "p377",
+    "descricao": "NOMAX? 15 SC,10X1 L,CR",
+    "pesoPalete": 585.95,
+    "pesoUnidade": 12.20725,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p378",
+    "descricao": "Shake®,4X5 L,BR",
+    "pesoPalete": 679.76,
+    "pesoUnidade": 22.65859,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p379",
+    "descricao": "Comet®,GU4X5 L,BR",
+    "pesoPalete": 687.83,
+    "pesoUnidade": 22.92751,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p380",
+    "descricao": "BELURE®,10X1 L,BR",
+    "pesoPalete": 624.04,
+    "pesoUnidade": 13.0009,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p381",
+    "descricao": "Nomax® SC,10X1 L,PE",
+    "pesoPalete": 585.13,
+    "pesoUnidade": 12.19024,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p382",
+    "descricao": "Expander®,10X1 L,MX",
+    "pesoPalete": 588.36,
+    "pesoUnidade": 12.25759,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p383",
+    "descricao": "ABACUS® HC,4X5 L,BR",
+    "pesoPalete": 740.32,
+    "pesoUnidade": 24.67733,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p384",
+    "descricao": "Taj?,4X5 L,BR",
+    "pesoPalete": 736.06,
+    "pesoUnidade": 24.53526,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p385",
+    "descricao": "VIOLIN® TS,10X1 L,BR",
+    "pesoPalete": 622.34,
+    "pesoUnidade": 12.96539,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p386",
+    "descricao": "Opera® Ultra,10X1 L,BR",
+    "pesoPalete": 608.21,
+    "pesoUnidade": 12.67108,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p387",
+    "descricao": "Opera® Ultra,4X5 L,BR",
+    "pesoPalete": 703.63,
+    "pesoUnidade": 23.45441,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p388",
+    "descricao": "FACET®,5X0,75 KG,BR",
+    "pesoPalete": 4.58,
+    "pesoUnidade": 4.57687,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p389",
+    "descricao": "STINGER?,1X20 L,BR",
+    "pesoPalete": 1099.99,
+    "pesoUnidade": 24.4443,
+    "qtdPorPalete": 900,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p390",
+    "descricao": "Regent® Ultra,10X1 L,MX",
+    "pesoPalete": 672.98,
+    "pesoUnidade": 14.02035,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p391",
+    "descricao": "Eforia®,12X1 L,BR",
+    "pesoPalete": 15.72,
+    "pesoUnidade": 15.71957,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p392",
+    "descricao": "Eforia®,4X5 L,BR",
+    "pesoPalete": 748.42,
+    "pesoUnidade": 24.94727,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p393",
+    "descricao": "PIX® 50,4X5 L,PY",
+    "pesoPalete": 666.57,
+    "pesoUnidade": 22.21889,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p394",
+    "descricao": "DASH? HC,4X5 L,AR",
+    "pesoPalete": 612.82,
+    "pesoUnidade": 20.4273,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p395",
+    "descricao": "PIX HC 4X5 L,BR",
+    "pesoPalete": 678.29,
+    "pesoUnidade": 22.6096,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p396",
+    "descricao": "INSIGNIA? SUPER,10X1 L,MX",
+    "pesoPalete": 625.45,
+    "pesoUnidade": 13.03028,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p397",
+    "descricao": "ABACUS (TM) HC,4X5 L,AR",
+    "pesoPalete": 742.17,
+    "pesoUnidade": 24.73888,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p398",
+    "descricao": "CABRIO? TOP,2X6 KG,BR",
+    "pesoPalete": 317.21,
+    "pesoUnidade": 13.21701,
+    "qtdPorPalete": 288,
+    "qtdPorCaixa": 12
+  },
+  {
+    "id": "p399",
+    "descricao": "RENASTE?,4X5 L,AR",
+    "pesoPalete": 695.09,
+    "pesoUnidade": 23.16957,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p400",
+    "descricao": "ABACUS? HC,4X5 L,UY",
+    "pesoPalete": 739.81,
+    "pesoUnidade": 24.66031,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p401",
+    "descricao": "DASH HC,4X5 L,BO",
+    "pesoPalete": 613.76,
+    "pesoUnidade": 20.45882,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p402",
+    "descricao": "COMET? EC,24X0,25 L,CO",
+    "pesoPalete": 554.78,
+    "pesoUnidade": 7.92544,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p403",
+    "descricao": "VIATHAN?,10X1 L,MX",
+    "pesoPalete": 590.98,
+    "pesoUnidade": 12.3121,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p404",
+    "descricao": "Caramba® 9 SL,24X0,2 L,CR",
+    "pesoPalete": 6.69,
+    "pesoUnidade": 6.68911,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p405",
+    "descricao": "NOMAX? 15 SC,24X0,2 L,CR",
+    "pesoPalete": 6.59,
+    "pesoUnidade": 6.59218,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p406",
+    "descricao": "Abacus® HC,GY4X5 L,BR",
+    "pesoPalete": 753.59,
+    "pesoUnidade": 25.1196,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p407",
+    "descricao": "Abacus® HC,GY10X1 L,BR",
+    "pesoPalete": 651.46,
+    "pesoUnidade": 13.572,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p408",
+    "descricao": "ACROBAT? CT,4X5 L,MX",
+    "pesoPalete": 817.85,
+    "pesoUnidade": 27.26172,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p409",
+    "descricao": "Tacazo®,GU10X1 L,AR",
+    "pesoPalete": 595.89,
+    "pesoUnidade": 12.41442,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p410",
+    "descricao": "Gelfix5 BE Soja,4X3 L,UNSPEZ.",
+    "pesoPalete": 13.43,
+    "pesoUnidade": 13.42607,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p411",
+    "descricao": "ARSENAL? 250,4X5 L,PY",
+    "pesoPalete": 713.11,
+    "pesoUnidade": 23.77037,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p412",
+    "descricao": "IMUNIT?,24X0,25 L,BO",
+    "pesoPalete": 559.6,
+    "pesoUnidade": 7.99428,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p413",
+    "descricao": "OPERA? 18.3 SE,24X0,25 L,CR",
+    "pesoPalete": 586.85,
+    "pesoUnidade": 8.38358,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p414",
+    "descricao": "FENDONA? 60 SC,10X1 L,CO",
+    "pesoPalete": 572.87,
+    "pesoUnidade": 11.93483,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p415",
+    "descricao": "Fendona® 60 SC,24X0,25 L,CO",
+    "pesoPalete": 540.55,
+    "pesoUnidade": 7.72219,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p416",
+    "descricao": "HEADLINE? PRO,24X0,25 L,PE",
+    "pesoPalete": 556.62,
+    "pesoUnidade": 7.95168,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p417",
+    "descricao": "OPERA? SE 18.3,4X5 L,CU",
+    "pesoPalete": 682.16,
+    "pesoUnidade": 22.73859,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p418",
+    "descricao": "Kumulus® DF - AG,4X6 KG,BR",
+    "pesoPalete": 25.62,
+    "pesoUnidade": 25.61981,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p419",
+    "descricao": "Aura® 200,4X5 L,BR",
+    "pesoPalete": 616.51,
+    "pesoUnidade": 20.55039,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p420",
+    "descricao": "COLLIS?,10X1 L,BR",
+    "pesoPalete": 612.29,
+    "pesoUnidade": 12.75606,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p421",
+    "descricao": "ORKESTRA (TM) SC,4X5 L,BR",
+    "pesoPalete": 761.42,
+    "pesoUnidade": 25.38054,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p422",
+    "descricao": "ORKESTRA (TM) SC,10X1 L,BR",
+    "pesoPalete": 643.37,
+    "pesoUnidade": 13.40346,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p423",
+    "descricao": "Source?,4X5 L,BR",
+    "pesoPalete": 738.63,
+    "pesoUnidade": 24.62098,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p424",
+    "descricao": "TENOPA (TM) 60 SC,24X0,25 L,MX",
+    "pesoPalete": 552.04,
+    "pesoUnidade": 7.88632,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p425",
+    "descricao": "Spot? SC,4X5 L,BR",
+    "pesoPalete": 732.05,
+    "pesoUnidade": 24.40157,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p426",
+    "descricao": "TENOPA? 60 SC,24X0,25 L,ID",
+    "pesoPalete": 544.51,
+    "pesoUnidade": 7.77869,
+    "qtdPorPalete": 420,
+    "qtdPorCaixa": 6
+  },
+  {
+    "id": "p427",
+    "descricao": "OPERA?,4X5 L,EC",
+    "pesoPalete": 702.19,
+    "pesoUnidade": 23.40649,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p428",
+    "descricao": "ORKESTRA (TM) SC,TA4X5 L,BR",
+    "pesoPalete": 771.37,
+    "pesoUnidade": 25.71219,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p429",
+    "descricao": "Forum®,10X1 KG,BR",
+    "pesoPalete": 530.77,
+    "pesoUnidade": 11.05771,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p430",
+    "descricao": "Tenopa®,GU10X1 L,MY",
+    "pesoPalete": 575.05,
+    "pesoUnidade": 11.98016,
+    "qtdPorPalete": 480,
+    "qtdPorCaixa": 10
+  },
+  {
+    "id": "p431",
+    "descricao": "Hicoat (TM),1X1 ST,PY",
+    "pesoPalete": 17.22,
+    "pesoUnidade": 17.21702,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  },
+  {
+    "id": "p432",
+    "descricao": "Arsenal® NA,GU4X5 L,BO",
+    "pesoPalete": 712.15,
+    "pesoUnidade": 23.73818,
+    "qtdPorPalete": 600,
+    "qtdPorCaixa": 20
+  },
+  {
+    "id": "p433",
+    "descricao": "HEAT?,10X0,35 KG,BR",
+    "pesoPalete": 279.48,
+    "pesoUnidade": 4.65793,
+    "qtdPorPalete": 210,
+    "qtdPorCaixa": 3.5
+  },
+  {
+    "id": "p434",
+    "descricao": "Palete, Mad, 1000x1200mm, n, CP1, F265",
+    "pesoPalete": 19.03,
+    "pesoUnidade": 19.03333,
+    "qtdPorPalete": 1,
+    "qtdPorCaixa": 1
+  }
 ];
 
 /* =============================
@@ -1740,4 +5105,5 @@ function baixarExcel(dados) {
 </script>
 </body>
 </html>
+
 
